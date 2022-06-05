@@ -1,7 +1,8 @@
 # Movies DWH/BI
 
 ### `./ETL` - proces ETL
-
+### `./DWH_Backup` - backup hurtowni
+### `./countries` - folder ze słownikami kodów krajów/języków
 #### `.env` - plik musi zawierać api key z TMDB (API_KEY=<api_key>)
 
 
