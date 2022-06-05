@@ -1,0 +1,3123 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/5/2022 1:18:57 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-I19PU1A"
+  DTS:CreatorName="DESKTOP-I19PU1A\adria"
+  DTS:DTSID="{2518500A-777E-4D1B-975B-FBB22927A247}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.521.0"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{F9E964C4-3369-4FE0-BF6C-73064D97D028}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-I19PU1A\MYSERVER.Movies_dwh]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F8B29EC3-716E-4440-A573-9A9EBDB25169}"
+      DTS:ObjectName="DESKTOP-I19PU1A\MYSERVER.Movies_dwh">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-I19PU1A\MYSERVER;Initial Catalog=Movies_dwh;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Insert People Error]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{09FFB45E-9934-4640-A24D-177408C9B6D0}"
+      DTS:ObjectName="Flat File Insert People Error">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\adria\Desktop\semestr_6\Hurtownie danych\projekt\ETL\ErrorsUpdatePeople\insert_people.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PersonID"
+              DTS:DTSID="{3E13D3C9-B6FE-4C43-8C1E-A9B276697741}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{7F7B1AB1-97B2-4007-B786-8938CAAC1544}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Birthday"
+              DTS:DTSID="{313769E0-CE93-49C7-9B65-641B9E440D9D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="KnownFor"
+              DTS:DTSID="{4A900711-7385-4701-829E-77961C2E5B37}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Deathday"
+              DTS:DTSID="{B9E86A1F-5639-45D3-AE5E-376BD42157B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{162A4F0D-2907-40BC-A4DD-722FD4CD2CFC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IMDBID"
+              DTS:DTSID="{CBD93E41-7B6C-4FE9-8F0B-E3D35DAF1524}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PopularityString"
+              DTS:DTSID="{D51D52C9-8EAD-4ED6-9D07-A5847ED31D32}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BirthdayID"
+              DTS:DTSID="{42599166-28FF-435D-B8DA-44B28EFA2A76}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GenderConverted"
+              DTS:DTSID="{CB806D8B-28FD-46DB-94B1-DD5E03378AE3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DeathdayID"
+              DTS:DTSID="{F594EF4D-DDAE-4D05-922C-28F466C43FBA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ValidTo"
+              DTS:DTSID="{C6B28310-0061-4717-9F14-1427803F5C68}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IMDBIDNullHandled"
+              DTS:DTSID="{77A4043F-553C-43D7-AE5C-54FA5320235B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Popularity"
+              DTS:DTSID="{F665A5CC-A9D1-406E-9708-F82697E4746F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="KnownForEncoded"
+              DTS:DTSID="{86751859-E5B8-421B-848E-CC6F16768E14}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OriginalPersonID"
+              DTS:DTSID="{7C216CCF-706E-41CE-B1B9-C466A9FAFF89}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ValidFrom"
+              DTS:DTSID="{3809B548-7E3A-4A07-B79B-06C72F8CA039}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status"
+              DTS:DTSID="{1BC95B4F-69FE-40D2-880A-CCDC443980BF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{D04D9BF1-042F-44FA-BF43-99B7210B38E0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{431B22A0-F83C-4C49-BE5F-26AD4DF4F00B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File People ID to Update]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{0352B3D9-B9E3-4C74-B3C3-AAFE609474DD}"
+      DTS:ObjectName="Flat File People ID to Update">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\adria\Desktop\semestr_6\Hurtownie danych\projekt\ETL\UpdatePeopleData\currentPeopleID.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:ObjectName="PersonID"
+              DTS:DTSID="{F4875D60-6F5D-4CD1-90D3-4410ED2BA2A1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Tranform Error]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{36596585-A283-4AEC-90B0-970EC94605F5}"
+      DTS:ObjectName="Flat File Tranform Error">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\adria\Desktop\semestr_6\Hurtownie danych\projekt\ETL\ErrorsUpdatePeople\tranform_people.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PersonID"
+              DTS:DTSID="{7D657344-58A3-47E8-B625-F82E8B6D4F1F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{910D2CDF-1539-448C-894D-B165E39ADA03}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Birthday"
+              DTS:DTSID="{5ED3074F-6BB9-4B5F-9B24-30A8CAF4FB8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="KnownFor"
+              DTS:DTSID="{2DACAC74-F269-4D7D-8219-E9032890F962}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Deathday"
+              DTS:DTSID="{4442AD32-CB42-4973-A4BF-23063644CEE0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{5893D167-B7A4-494E-82B4-F576239F47E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IMDBID"
+              DTS:DTSID="{3A8E8AFF-704F-44D0-9425-DC3DF2B071AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PopularityString"
+              DTS:DTSID="{848FAFDB-FA47-49C8-BE1D-A7FCB29FC2FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{F562287B-8932-4E2A-A632-E5B4402E06EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{9428AB43-11E4-4681-B26A-F64A575F4DE3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Update People]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DE8698FB-BFE2-46FF-88D5-0085FD6168F8}"
+      DTS:ObjectName="Flat File Update People">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\adria\Desktop\semestr_6\Hurtownie danych\projekt\ETL\UpdatePeopleData\people.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:ObjectName="PersonID"
+              DTS:DTSID="{5ABD2BDC-885E-4218-BB07-917E7CECB74E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{2C5F4577-1737-4621-BFE3-87BB352D8224}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Birthday"
+              DTS:DTSID="{2521E34D-68D9-486C-90D7-FA8EEE6BB0D0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="KnownFor"
+              DTS:DTSID="{5D9181C4-C0AA-4C50-85F3-8BE90E7DE990}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Deathday"
+              DTS:DTSID="{0097E310-364E-4361-81E4-FF0F0B561B20}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{42315C6F-CF4F-4C99-8E84-C3ED4C7D68E3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IMDBID"
+              DTS:DTSID="{83BFDCFA-DF0B-41F1-A33E-C5D83E1082E7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:ObjectName="PopularityString"
+              DTS:DTSID="{D2501C52-FEE4-4820-95B7-0BF916349154}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Update People Error]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{17CFD64F-F437-4090-9DDB-B919CB8AEAD5}"
+      DTS:ObjectName="Flat File Update People Error">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\adria\Desktop\semestr_6\Hurtownie danych\projekt\ETL\ErrorsUpdatePeople\update_people.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PersonID"
+              DTS:DTSID="{0C81512D-5E6F-4226-A0BD-E1BC6F267D13}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{76B7B30A-26AE-418E-BB1E-D73F50A71C09}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Birthday"
+              DTS:DTSID="{2B99A81C-0F01-437D-BBCC-1AE4BCFB5DC8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="KnownFor"
+              DTS:DTSID="{09EE5D0D-8951-4E1E-80D9-EDBF734D3CFE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Deathday"
+              DTS:DTSID="{8C292484-29E7-41AF-B76D-F322F86C47F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{3314C4A9-F1B8-4DBA-A927-1B149D2AB97E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IMDBID"
+              DTS:DTSID="{18403F16-3661-4C3E-87BF-EE84507E4006}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PopularityString"
+              DTS:DTSID="{26192019-B1E5-4F7A-A75A-14CE33097AC5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BirthdayID"
+              DTS:DTSID="{63DEDFE2-D4BF-4F11-87B0-8E885A6396BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GenderConverted"
+              DTS:DTSID="{7AE2CA38-E9D3-4138-8989-14F803EC51BF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DeathdayID"
+              DTS:DTSID="{424D4C7B-3695-434F-A26D-2675A6C98213}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ValidTo"
+              DTS:DTSID="{F799E597-FDEC-4F48-A33C-E47D6C6F26FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IMDBIDNullHandled"
+              DTS:DTSID="{730390B0-EE19-41E4-9F52-2719995B4AAE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Popularity"
+              DTS:DTSID="{773D7384-CC12-40AE-8620-AC5A75D802BC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="KnownForEncoded"
+              DTS:DTSID="{15EA4F3B-B716-4A7A-88B0-77E57B4C3EDF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OriginalPersonID"
+              DTS:DTSID="{088B5E26-F933-4B83-873D-7218989E89CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{C8E8EEB2-2192-4B52-9AC7-A25FBCE77B14}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{8C1D16CF-974D-4051-B4CD-F7ABD89D9EF1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\callToApi"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{846531f0-c1c2-481f-aa27-ac5b244bc270}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="callToApi"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022 CTP2.0; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Users\adria\Desktop\semestr_6\Hurtownie danych\projekt\ETL\updatePeople.bat"
+          WorkingDirectory="C:\Users\adria\Desktop\semestr_6\Hurtownie danych\projekt\ETL" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Clean up"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{3b6b4b80-7689-4991-87b2-494f18ec6e26}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Clean up"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022 CTP2.0; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Users\adria\Desktop\semestr_6\Hurtownie danych\projekt\ETL\cleanUpUpdatePeople.bat"
+          WorkingDirectory="C:\Users\adria\Desktop\semestr_6\Hurtownie danych\projekt\ETL" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get People ID"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{4727616d-30f3-453e-bb41-26c3ac2690e9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get People ID"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Get People ID\Distinct People"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Distinct People"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select distinct PersonID
+from [dbo].[People]</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Get People ID\Distinct People.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-I19PU1A\MYSERVER.Movies_dwh]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-I19PU1A\MYSERVER.Movies_dwh]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Get People ID\Distinct People.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get People ID\Distinct People.Outputs[OLE DB Source Output].Columns[PersonID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get People ID\Distinct People.Outputs[OLE DB Source Output].ExternalColumns[PersonID]"
+                      lineageId="Package\Get People ID\Distinct People.Outputs[OLE DB Source Output].Columns[PersonID]"
+                      name="PersonID"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Get People ID\Distinct People.Outputs[OLE DB Source Output].ExternalColumns[PersonID]"
+                      dataType="i4"
+                      name="PersonID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Get People ID\Distinct People.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get People ID\Distinct People.Outputs[OLE DB Source Error Output].Columns[PersonID]"
+                      dataType="i4"
+                      lineageId="Package\Get People ID\Distinct People.Outputs[OLE DB Source Error Output].Columns[PersonID]"
+                      name="PersonID" />
+                    <outputColumn
+                      refId="Package\Get People ID\Distinct People.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Get People ID\Distinct People.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Get People ID\Distinct People.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Get People ID\Distinct People.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get People ID\Flat File People ID"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1045"
+              name="Flat File People ID"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Get People ID\Flat File People ID.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File People ID to Update]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File People ID to Update]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Get People ID\Flat File People ID.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Get People ID\Flat File People ID.Inputs[Flat File Destination Input].Columns[PersonID]"
+                      cachedDataType="i4"
+                      cachedName="PersonID"
+                      externalMetadataColumnId="Package\Get People ID\Flat File People ID.Inputs[Flat File Destination Input].ExternalColumns[PersonID]"
+                      lineageId="Package\Get People ID\Distinct People.Outputs[OLE DB Source Output].Columns[PersonID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Get People ID\Flat File People ID.Inputs[Flat File Destination Input].ExternalColumns[PersonID]"
+                      dataType="i4"
+                      name="PersonID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Get People ID.Paths[OLE DB Source Output]"
+              endId="Package\Get People ID\Flat File People ID.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Get People ID\Distinct People.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update People"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{e5ffa727-1832-4392-8b08-12e0f2cb5997}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update People"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Update People\Create ValidTo and Status Columns"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Create ValidTo and Status Columns"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Update People\Create ValidTo and Status Columns.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update People\Create ValidTo and Status Columns.Inputs[Derived Column Input].Columns[ValidToOld]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ValidToOld"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[ValidToOld]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Update People\Create ValidTo and Status Columns.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Output].Columns[ValidFrom]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Output].Columns[ValidFrom]"
+                      name="ValidFrom"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DBTIMESTAMP)([DATEADD]("ms",10,#{Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[ValidToOld]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBTIMESTAMP)(DATEADD("ms",10,ValidToOld))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Output].Columns[Status]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="4"
+                      lineageId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Output].Columns[Status]"
+                      name="Status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,4,1250)("Curr")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,4,1250)("Curr")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Output].Columns[ValidToNew]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Output].Columns[ValidToNew]"
+                      name="ValidToNew"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DBTIMESTAMP)"12-31-8999"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBTIMESTAMP)"12-31-8999"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Update People\Create ValidTo and Status Columns.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update People\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1045"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update People\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Tranform Error]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Tranform Error]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].Columns[PersonID]"
+                      cachedDataType="i4"
+                      cachedName="PersonID"
+                      externalMetadataColumnId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PersonID]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[PersonID]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].Columns[Birthday]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Birthday"
+                      externalMetadataColumnId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Birthday]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Birthday]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].Columns[KnownFor]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="KnownFor"
+                      externalMetadataColumnId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[KnownFor]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[KnownFor]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].Columns[Deathday]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Deathday"
+                      externalMetadataColumnId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Deathday]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Deathday]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].Columns[Gender]"
+                      cachedDataType="i4"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].Columns[IMDBID]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="IMDBID"
+                      externalMetadataColumnId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[IMDBID]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].Columns[PopularityString]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PopularityString"
+                      externalMetadataColumnId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PopularityString]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[PopularityString]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PersonID]"
+                      dataType="i4"
+                      name="PersonID" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="100"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Birthday]"
+                      dataType="wstr"
+                      length="50"
+                      name="Birthday" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[KnownFor]"
+                      dataType="wstr"
+                      length="50"
+                      name="KnownFor" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Deathday]"
+                      dataType="wstr"
+                      length="50"
+                      name="Deathday" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Gender]"
+                      dataType="i4"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[IMDBID]"
+                      dataType="wstr"
+                      length="9"
+                      name="IMDBID" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PopularityString]"
+                      dataType="wstr"
+                      length="50"
+                      name="PopularityString" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Update People\Flat File Update Error"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1045"
+              name="Flat File Update Error"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update People\Flat File Update Error.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Update People Error]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Update People Error]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[PersonID]"
+                      cachedDataType="i4"
+                      cachedName="PersonID"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[PersonID]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[PersonID]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[Birthday]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Birthday"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[Birthday]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Birthday]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[KnownFor]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="KnownFor"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[KnownFor]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[KnownFor]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[Deathday]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Deathday"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[Deathday]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Deathday]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[Gender]"
+                      cachedDataType="i4"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[IMDBID]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="IMDBID"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[IMDBID]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[PopularityString]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PopularityString"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[PopularityString]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[PopularityString]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[BirthdayID]"
+                      cachedDataType="i4"
+                      cachedName="BirthdayID"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[BirthdayID]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[BirthdayID]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[GenderConverted]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="GenderConverted"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[GenderConverted]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[GenderConverted]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[DeathdayID]"
+                      cachedDataType="i4"
+                      cachedName="DeathdayID"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[DeathdayID]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[DeathdayID]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[ValidToOld]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ValidToOld"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[ValidTo]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[ValidToOld]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[IMDBIDNullHandled]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="IMDBIDNullHandled"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[IMDBIDNullHandled]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[IMDBIDNullHandled]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[Popularity]"
+                      cachedDataType="r8"
+                      cachedName="Popularity"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[Popularity]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[Popularity]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[KnownForEncoded]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="KnownForEncoded"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[KnownForEncoded]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[KnownForEncoded]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[OriginalPersonID]"
+                      cachedDataType="i4"
+                      cachedName="OriginalPersonID"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[OriginalPersonID]"
+                      lineageId="Package\Update People\Is Already In DW.Outputs[Lookup Match Output].Columns[OriginalPersonID]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Update People\Update ValidTo and Status.Outputs[OLE DB Command Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Update People\Update ValidTo and Status.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[PersonID]"
+                      dataType="i4"
+                      name="PersonID" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="100"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[Birthday]"
+                      dataType="wstr"
+                      length="50"
+                      name="Birthday" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[KnownFor]"
+                      dataType="wstr"
+                      length="50"
+                      name="KnownFor" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[Deathday]"
+                      dataType="wstr"
+                      length="50"
+                      name="Deathday" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[Gender]"
+                      dataType="i4"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[IMDBID]"
+                      dataType="wstr"
+                      length="9"
+                      name="IMDBID" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[PopularityString]"
+                      dataType="wstr"
+                      length="50"
+                      name="PopularityString" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[BirthdayID]"
+                      dataType="i4"
+                      name="BirthdayID" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[GenderConverted]"
+                      dataType="wstr"
+                      length="10"
+                      name="GenderConverted" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[DeathdayID]"
+                      dataType="i4"
+                      name="DeathdayID" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[ValidTo]"
+                      dataType="dbTimeStamp"
+                      name="ValidTo" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[IMDBIDNullHandled]"
+                      dataType="wstr"
+                      length="9"
+                      name="IMDBIDNullHandled" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[Popularity]"
+                      dataType="r8"
+                      name="Popularity" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[KnownForEncoded]"
+                      dataType="ui2"
+                      name="KnownForEncoded" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[OriginalPersonID]"
+                      dataType="i4"
+                      name="OriginalPersonID" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Update People\Insert New Person Record"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert New Person Record"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[People]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update People\Insert New Person Record.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-I19PU1A\MYSERVER.Movies_dwh]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-I19PU1A\MYSERVER.Movies_dwh]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="RedirectRow"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].Columns[PersonID]"
+                      cachedDataType="i4"
+                      cachedName="PersonID"
+                      externalMetadataColumnId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[PersonID]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[PersonID]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].Columns[Popularity]"
+                      cachedDataType="r8"
+                      cachedName="Popularity"
+                      externalMetadataColumnId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[Popularity]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[Popularity]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].Columns[Status]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="Status"
+                      externalMetadataColumnId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                      lineageId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Output].Columns[Status]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].Columns[ValidFrom]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ValidFrom"
+                      externalMetadataColumnId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[ValidFrom]"
+                      lineageId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Output].Columns[ValidFrom]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].Columns[BirthdayID]"
+                      cachedDataType="i4"
+                      cachedName="BirthdayID"
+                      externalMetadataColumnId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[Birthday]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[BirthdayID]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].Columns[DeathdayID]"
+                      cachedDataType="i4"
+                      cachedName="DeathdayID"
+                      externalMetadataColumnId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[Deathday]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[DeathdayID]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].Columns[GenderConverted]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="GenderConverted"
+                      externalMetadataColumnId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[GenderConverted]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].Columns[IMDBIDNullHandled]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="IMDBIDNullHandled"
+                      externalMetadataColumnId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[IMDBID]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[IMDBIDNullHandled]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].Columns[KnownForEncoded]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="KnownForEncoded"
+                      externalMetadataColumnId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[KnownFor]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[KnownForEncoded]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].Columns[ValidToNew]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ValidToNew"
+                      externalMetadataColumnId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[ValidTo]"
+                      lineageId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Output].Columns[ValidToNew]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[PersonSKID]"
+                      dataType="i4"
+                      name="PersonSKID" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[PersonID]"
+                      dataType="i4"
+                      name="PersonID" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="100"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[Birthday]"
+                      dataType="i4"
+                      name="Birthday" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[KnownFor]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="KnownFor" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[Deathday]"
+                      dataType="i4"
+                      name="Deathday" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      codePage="1250"
+                      dataType="str"
+                      length="10"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[IMDBID]"
+                      codePage="1250"
+                      dataType="str"
+                      length="9"
+                      name="IMDBID" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[Popularity]"
+                      dataType="r8"
+                      name="Popularity" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[ValidFrom]"
+                      dataType="dbTimeStamp"
+                      name="ValidFrom" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[ValidTo]"
+                      dataType="dbTimeStamp"
+                      name="ValidTo" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                      codePage="1250"
+                      dataType="str"
+                      length="4"
+                      name="Status" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update People\Insert New Person Record.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update People\Insert New Person Record.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update People\Insert New Person Record.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update People\Insert New Person Record.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update People\Insert New Person Record.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update People\Insert People Error"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1045"
+              name="Insert People Error"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update People\Insert People Error.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Insert People Error]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Insert People Error]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[PersonID]"
+                      cachedDataType="i4"
+                      cachedName="PersonID"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[PersonID]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[PersonID]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[Birthday]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Birthday"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[Birthday]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Birthday]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[KnownFor]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="KnownFor"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[KnownFor]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[KnownFor]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[Deathday]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Deathday"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[Deathday]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Deathday]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[Gender]"
+                      cachedDataType="i4"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[IMDBID]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="IMDBID"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[IMDBID]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[Popularity]"
+                      cachedDataType="r8"
+                      cachedName="Popularity"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[Popularity]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[Popularity]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[BirthdayID]"
+                      cachedDataType="i4"
+                      cachedName="BirthdayID"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[BirthdayID]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[BirthdayID]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[GenderConverted]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="GenderConverted"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[GenderConverted]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[GenderConverted]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[DeathdayID]"
+                      cachedDataType="i4"
+                      cachedName="DeathdayID"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[DeathdayID]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[DeathdayID]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[Status]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="Status"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[Status]"
+                      lineageId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Output].Columns[Status]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[ValidFrom]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ValidFrom"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[ValidFrom]"
+                      lineageId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Output].Columns[ValidFrom]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[ValidToOld]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ValidToOld"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[ValidTo]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[ValidToOld]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[IMDBIDNullHandled]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="IMDBIDNullHandled"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[IMDBIDNullHandled]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[IMDBIDNullHandled]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Update People\Insert New Person Record.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Update People\Insert New Person Record.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[PersonID]"
+                      dataType="i4"
+                      name="PersonID" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="100"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[Birthday]"
+                      dataType="wstr"
+                      length="50"
+                      name="Birthday" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[KnownFor]"
+                      dataType="wstr"
+                      length="50"
+                      name="KnownFor" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[Deathday]"
+                      dataType="wstr"
+                      length="50"
+                      name="Deathday" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[Gender]"
+                      dataType="i4"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[IMDBID]"
+                      dataType="wstr"
+                      length="9"
+                      name="IMDBID" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[Popularity]"
+                      dataType="r8"
+                      name="Popularity" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[BirthdayID]"
+                      dataType="i4"
+                      name="BirthdayID" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[GenderConverted]"
+                      dataType="wstr"
+                      length="10"
+                      name="GenderConverted" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[DeathdayID]"
+                      dataType="i4"
+                      name="DeathdayID" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[Status]"
+                      dataType="wstr"
+                      length="4"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[ValidFrom]"
+                      dataType="dbTimeStamp"
+                      name="ValidFrom" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[ValidTo]"
+                      dataType="dbTimeStamp"
+                      name="ValidTo" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[IMDBIDNullHandled]"
+                      dataType="wstr"
+                      length="9"
+                      name="IMDBIDNullHandled" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[PopularityString]"
+                      dataType="wstr"
+                      length="50"
+                      name="PopularityString" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[KnownForEncoded]"
+                      dataType="wstr"
+                      length="50"
+                      name="KnownForEncoded" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[OriginalPersonID]"
+                      dataType="i4"
+                      name="OriginalPersonID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Update People\Is Already In DW"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Is Already In DW"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select distinct PersonID
+from [dbo].[People]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select distinct PersonID
+from [dbo].[People]) [refTable]
+where [refTable].[PersonID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="PersonID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Update People\People.Outputs[Flat File Source Output].Columns[PersonID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update People\Is Already In DW.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-I19PU1A\MYSERVER.Movies_dwh]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-I19PU1A\MYSERVER.Movies_dwh]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Update People\Is Already In DW.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update People\Is Already In DW.Inputs[Lookup Input].Columns[PersonID]"
+                      cachedDataType="i4"
+                      cachedName="PersonID"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[PersonID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">PersonID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update People\Is Already In DW.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Update People\Is Already In DW.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update People\Is Already In DW.Outputs[Lookup Match Output].Columns[OriginalPersonID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Update People\Is Already In DW.Outputs[Lookup Match Output].Columns[OriginalPersonID]"
+                      name="OriginalPersonID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">PersonID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update People\Is Already In DW.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Update People\Is Already In DW.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update People\Is Already In DW.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Update People\Is Already In DW.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update People\Is Already In DW.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update People\Is Already In DW.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update People\Is Already In DW.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update People\Is Already In DW.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update People\People"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="People"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update People\People.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Update People]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Update People]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Update People\People.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Output].Columns[PersonID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[PersonID]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[PersonID]"
+                      name="PersonID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[Name]"
+                      length="100"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Birthday]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[Birthday]"
+                      length="50"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Birthday]"
+                      name="Birthday"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Output].Columns[KnownFor]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[KnownFor]"
+                      length="50"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[KnownFor]"
+                      name="KnownFor"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Deathday]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[Deathday]"
+                      length="50"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Deathday]"
+                      name="Deathday"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Gender]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[IMDBID]"
+                      length="9"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]"
+                      name="IMDBID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Output].Columns[PopularityString]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[PopularityString]"
+                      length="50"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[PopularityString]"
+                      name="PopularityString"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[PersonID]"
+                      dataType="i4"
+                      name="PersonID" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="100"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[Birthday]"
+                      dataType="wstr"
+                      length="50"
+                      name="Birthday" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[KnownFor]"
+                      dataType="wstr"
+                      length="50"
+                      name="KnownFor" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[Deathday]"
+                      dataType="wstr"
+                      length="50"
+                      name="Deathday" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      dataType="i4"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[IMDBID]"
+                      dataType="wstr"
+                      length="9"
+                      name="IMDBID" />
+                    <externalMetadataColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[PopularityString]"
+                      dataType="wstr"
+                      length="50"
+                      name="PopularityString" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Update People\People.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update People\People.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update People\Transform Columns"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Transform Columns"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Update People\Transform Columns.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update People\Transform Columns.Inputs[Derived Column Input].Columns[Birthday]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Birthday"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Birthday]" />
+                    <inputColumn
+                      refId="Package\Update People\Transform Columns.Inputs[Derived Column Input].Columns[Deathday]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Deathday"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Deathday]" />
+                    <inputColumn
+                      refId="Package\Update People\Transform Columns.Inputs[Derived Column Input].Columns[Gender]"
+                      cachedDataType="i4"
+                      cachedName="Gender"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\Update People\Transform Columns.Inputs[Derived Column Input].Columns[IMDBID]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="IMDBID"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]" />
+                    <inputColumn
+                      refId="Package\Update People\Transform Columns.Inputs[Derived Column Input].Columns[PopularityString]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PopularityString"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[PopularityString]" />
+                    <inputColumn
+                      refId="Package\Update People\Transform Columns.Inputs[Derived Column Input].Columns[KnownFor]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="KnownFor"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[KnownFor]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update People\Transform Columns.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Update People\Transform Columns.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[BirthdayID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[BirthdayID]"
+                      name="BirthdayID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)([ISNULL](#{Package\Update People\People.Outputs[Flat File Source Output].Columns[Birthday]}) || #{Package\Update People\People.Outputs[Flat File Source Output].Columns[Birthday]} == "" ? 89991231 : (DT_I4)[REPLACE](#{Package\Update People\People.Outputs[Flat File Source Output].Columns[Birthday]},"-",""))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)(ISNULL(Birthday) || Birthday == "" ? 89991231 : (DT_I4)REPLACE(Birthday,"-",""))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[GenderConverted]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="RedirectRow"
+                      length="10"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[GenderConverted]"
+                      name="GenderConverted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,10,1250)(#{Package\Update People\People.Outputs[Flat File Source Output].Columns[Gender]} == 0 ? "Mezczyzna" : #{Package\Update People\People.Outputs[Flat File Source Output].Columns[Gender]} == 1 ? "Kobieta" : "Nieznana")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,10,1250)(Gender == 0 ? "Mezczyzna" : Gender == 1 ? "Kobieta" : "Nieznana")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[DeathdayID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[DeathdayID]"
+                      name="DeathdayID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)([ISNULL](#{Package\Update People\People.Outputs[Flat File Source Output].Columns[Deathday]}) || #{Package\Update People\People.Outputs[Flat File Source Output].Columns[Deathday]} == "" ? 89991231 : (DT_I4)[REPLACE](#{Package\Update People\People.Outputs[Flat File Source Output].Columns[Deathday]},"-",""))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)(ISNULL(Deathday) || Deathday == "" ? 89991231 : (DT_I4)REPLACE(Deathday,"-",""))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[ValidToOld]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[ValidToOld]"
+                      name="ValidToOld"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[IMDBIDNullHandled]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="RedirectRow"
+                      length="9"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[IMDBIDNullHandled]"
+                      name="IMDBIDNullHandled"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,9,1250)([ISNULL](#{Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]}) || #{Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]} == "" ? "Nieznane_" : #{Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,9,1250)(ISNULL(IMDBID) || IMDBID == "" ? "Nieznane_" : IMDBID)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[Popularity]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[Popularity]"
+                      name="Popularity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_R8)([REPLACE](#{Package\Update People\People.Outputs[Flat File Source Output].Columns[PopularityString]},".",","))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_R8)(REPLACE(PopularityString,".",","))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[KnownForEncoded]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[KnownForEncoded]"
+                      name="KnownForEncoded"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1250)(#{Package\Update People\People.Outputs[Flat File Source Output].Columns[KnownFor]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1250)(KnownFor)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update People\Transform Columns.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Update People\Transform Columns.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update People\Transform Columns.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update People\Transform Columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update People\Update ValidTo and Status"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Update ValidTo and Status"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">update People 
+set ValidTo = ?,
+      Status='Hist' 
+where PersonID = ? and Status = 'Curr'</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update People\Update ValidTo and Status.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-I19PU1A\MYSERVER.Movies_dwh]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-I19PU1A\MYSERVER.Movies_dwh]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Update People\Update ValidTo and Status.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="RedirectRow"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update People\Update ValidTo and Status.Inputs[OLE DB Command Input].Columns[PersonID]"
+                      cachedDataType="i4"
+                      cachedName="PersonID"
+                      externalMetadataColumnId="Package\Update People\Update ValidTo and Status.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[PersonID]" />
+                    <inputColumn
+                      refId="Package\Update People\Update ValidTo and Status.Inputs[OLE DB Command Input].Columns[ValidToOld]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ValidToOld"
+                      externalMetadataColumnId="Package\Update People\Update ValidTo and Status.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[ValidToOld]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update People\Update ValidTo and Status.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="dbTimeStamp"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Update People\Update ValidTo and Status.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update People\Update ValidTo and Status.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Update People\Update ValidTo and Status.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update People\Update ValidTo and Status.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Update People\Update ValidTo and Status.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update People\Update ValidTo and Status.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update People\Update ValidTo and Status.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update People\Update ValidTo and Status.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update People\Update ValidTo and Status.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Update People.Paths[Derived Column Error Output]"
+              endId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Derived Column Error Output"
+              startId="Package\Update People\Transform Columns.Outputs[Derived Column Error Output]" />
+            <path
+              refId="Package\Update People.Paths[Derived Column Output]"
+              endId="Package\Update People\Is Already In DW.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Update People\Transform Columns.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Update People.Paths[Derived Column Output1]"
+              endId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Update People\Create ValidTo and Status Columns.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Update People.Paths[Flat File Source Output]"
+              endId="Package\Update People\Transform Columns.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Update People\People.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Update People.Paths[Lookup Match Output]"
+              endId="Package\Update People\Update ValidTo and Status.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Update People\Is Already In DW.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Update People.Paths[OLE DB Command Error Output]"
+              endId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input]"
+              name="OLE DB Command Error Output"
+              startId="Package\Update People\Update ValidTo and Status.Outputs[OLE DB Command Error Output]" />
+            <path
+              refId="Package\Update People.Paths[OLE DB Command Output]"
+              endId="Package\Update People\Create ValidTo and Status Columns.Inputs[Derived Column Input]"
+              name="OLE DB Command Output"
+              startId="Package\Update People\Update ValidTo and Status.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\Update People.Paths[OLE DB Destination Error Output]"
+              endId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input]"
+              name="OLE DB Destination Error Output"
+              startId="Package\Update People\Insert New Person Record.Outputs[OLE DB Destination Error Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{A4D963EA-353F-4E52-B498-1B7E9AFDF86A}"
+      DTS:From="Package\Get People ID"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\callToApi" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{5A847550-02AE-46B7-BC66-0D632E18E6DC}"
+      DTS:From="Package\callToApi"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Update People" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{25AED484-3DED-4451-BE47-0CB609188391}"
+      DTS:From="Package\Update People"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Clean up" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Get People ID"
+          TopLeft="420,86" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\callToApi"
+          TopLeft="431,169" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="493.5,128">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Clean up"
+          TopLeft="433,334" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Update People"
+          TopLeft="413,248" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="491,211">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="491.75,290">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Get People ID">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Get People ID\Flat File People ID"
+          TopLeft="611,234" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Get People ID\Distinct People"
+          TopLeft="616,134" />
+        <EdgeLayout
+          Id="Package\Get People ID.Paths[OLE DB Source Output]"
+          TopLeft="693.75,176">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Get People ID\Distinct People">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Update People">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Update People\People"
+          TopLeft="158,51" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Update People\Insert People Error"
+          TopLeft="138,541" />
+        <NodeLayout
+          Size="208,42"
+          Id="Package\Update People\Insert New Person Record"
+          TopLeft="114,450" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Update People\Transform Columns"
+          TopLeft="131,119" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Update People\Flat File Destination"
+          TopLeft="423,117" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Update People\Is Already In DW"
+          TopLeft="139,201" />
+        <EdgeLayout
+          Id="Package\Update People.Paths[Flat File Source Output]"
+          TopLeft="216.75,93">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26"
+              Start="0,0"
+              End="0,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update People.Paths[Derived Column Error Output]"
+          TopLeft="307,139">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="116,0"
+              Start="0,0"
+              End="108.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="108.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-10.71138671875,5,129.9227734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update People.Paths[OLE DB Destination Error Output]"
+          TopLeft="220.75,492">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-73.20890625,15.033203125,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update People.Paths[Derived Column Output]"
+          TopLeft="219.25,161">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="210,42"
+          Id="Package\Update People\Update ValidTo and Status"
+          TopLeft="115,287" />
+        <EdgeLayout
+          Id="Package\Update People.Paths[Lookup Match Output]"
+          TopLeft="219.75,243">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,12.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="254,42"
+          Id="Package\Update People\Create ValidTo and Status Columns"
+          TopLeft="98,368" />
+        <EdgeLayout
+          Id="Package\Update People.Paths[OLE DB Command Output]"
+          TopLeft="222.5,329">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update People.Paths[Derived Column Output1]"
+          TopLeft="221.5,410">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Update People\Flat File Update Error"
+          TopLeft="445,281" />
+        <EdgeLayout
+          Id="Package\Update People.Paths[OLE DB Command Error Output]"
+          TopLeft="325,305">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120,0"
+              Start="0,0"
+              End="112.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="112.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-14.45890625,5,141.4178125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Update People\Insert New Person Record">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Update People\Is Already In DW">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
