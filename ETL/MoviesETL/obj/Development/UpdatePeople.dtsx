@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{F9E964C4-3369-4FE0-BF6C-73064D97D028}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{EB9121A2-FCAC-4E03-9D97-DCAD3AD019FF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -369,7 +369,7 @@
               DTS:ColumnDelimiter="_x002C_"
               DTS:DataType="3"
               DTS:ObjectName="PersonID"
-              DTS:DTSID="{5ABD2BDC-885E-4218-BB07-917E7CECB74E}"
+              DTS:DTSID="{B27A9AEE-EEC0-48AC-A444-6B0D81464A47}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -378,7 +378,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Name"
-              DTS:DTSID="{2C5F4577-1737-4621-BFE3-87BB352D8224}"
+              DTS:DTSID="{2E9883AD-6423-41F0-8DCF-643A81C146D1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -387,7 +387,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Birthday"
-              DTS:DTSID="{2521E34D-68D9-486C-90D7-FA8EEE6BB0D0}"
+              DTS:DTSID="{223B41D0-799E-4B86-A4CC-53CE5F4CD81F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -396,7 +396,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="KnownFor"
-              DTS:DTSID="{5D9181C4-C0AA-4C50-85F3-8BE90E7DE990}"
+              DTS:DTSID="{59D2266E-1F75-4E0C-AD17-C3690F169F39}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -405,7 +405,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Deathday"
-              DTS:DTSID="{0097E310-364E-4361-81E4-FF0F0B561B20}"
+              DTS:DTSID="{89C7BC21-91F6-4259-B120-CAACDFAF7F73}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -413,16 +413,16 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Gender"
-              DTS:DTSID="{42315C6F-CF4F-4C99-8E84-C3ED4C7D68E3}"
+              DTS:DTSID="{C6080B10-7D33-4339-AD81-B591A5FC49F9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="9"
+              DTS:MaximumWidth="10"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="IMDBID"
-              DTS:DTSID="{83BFDCFA-DF0B-41F1-A33E-C5D83E1082E7}"
+              DTS:DTSID="{CC5058C0-1E2C-46E3-A7ED-AF5A6D022366}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -430,7 +430,7 @@
               DTS:MaximumWidth="50"
               DTS:DataType="130"
               DTS:ObjectName="PopularityString"
-              DTS:DTSID="{D2501C52-FEE4-4820-95B7-0BF916349154}"
+              DTS:DTSID="{F290BD51-4A1C-4B9D-B8C3-57A219491AB7}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1048,7 +1048,7 @@ from [dbo].[People]</property>
                     <inputColumn
                       refId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].Columns[IMDBID]"
                       cachedDataType="wstr"
-                      cachedLength="9"
+                      cachedLength="10"
                       cachedName="IMDBID"
                       externalMetadataColumnId="Package\Update People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[IMDBID]"
                       lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]" />
@@ -1203,7 +1203,7 @@ from [dbo].[People]</property>
                     <inputColumn
                       refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[IMDBID]"
                       cachedDataType="wstr"
-                      cachedLength="9"
+                      cachedLength="10"
                       cachedName="IMDBID"
                       externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[IMDBID]"
                       lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]" />
@@ -1244,7 +1244,7 @@ from [dbo].[People]</property>
                       refId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].Columns[IMDBIDNullHandled]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="9"
+                      cachedLength="10"
                       cachedName="IMDBIDNullHandled"
                       externalMetadataColumnId="Package\Update People\Flat File Update Error.Inputs[Flat File Destination Input].ExternalColumns[IMDBIDNullHandled]"
                       lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[IMDBIDNullHandled]" />
@@ -1496,7 +1496,7 @@ from [dbo].[People]</property>
                       refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].Columns[IMDBIDNullHandled]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="9"
+                      cachedLength="10"
                       cachedName="IMDBIDNullHandled"
                       externalMetadataColumnId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[IMDBID]"
                       lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[IMDBIDNullHandled]" />
@@ -1554,7 +1554,7 @@ from [dbo].[People]</property>
                       refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[IMDBID]"
                       codePage="1250"
                       dataType="str"
-                      length="9"
+                      length="10"
                       name="IMDBID" />
                     <externalMetadataColumn
                       refId="Package\Update People\Insert New Person Record.Inputs[OLE DB Destination Input].ExternalColumns[Popularity]"
@@ -1681,7 +1681,7 @@ from [dbo].[People]</property>
                     <inputColumn
                       refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[IMDBID]"
                       cachedDataType="wstr"
-                      cachedLength="9"
+                      cachedLength="10"
                       cachedName="IMDBID"
                       externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[IMDBID]"
                       lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]" />
@@ -1735,7 +1735,7 @@ from [dbo].[People]</property>
                       refId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].Columns[IMDBIDNullHandled]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="9"
+                      cachedLength="10"
                       cachedName="IMDBIDNullHandled"
                       externalMetadataColumnId="Package\Update People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[IMDBIDNullHandled]"
                       lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[IMDBIDNullHandled]" />
@@ -2168,7 +2168,7 @@ where [refTable].[PersonID] = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[IMDBID]"
-                      length="9"
+                      length="10"
                       lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]"
                       name="IMDBID"
                       truncationRowDisposition="FailComponent">
@@ -2238,7 +2238,7 @@ where [refTable].[PersonID] = ?</property>
                     <externalMetadataColumn
                       refId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[IMDBID]"
                       dataType="wstr"
-                      length="9"
+                      length="10"
                       name="IMDBID" />
                     <externalMetadataColumn
                       refId="Package\Update People\People.Outputs[Flat File Source Output].ExternalColumns[PopularityString]"
@@ -2309,7 +2309,7 @@ where [refTable].[PersonID] = ?</property>
                     <inputColumn
                       refId="Package\Update People\Transform Columns.Inputs[Derived Column Input].Columns[IMDBID]"
                       cachedDataType="wstr"
-                      cachedLength="9"
+                      cachedLength="10"
                       cachedName="IMDBID"
                       lineageId="Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]" />
                     <inputColumn
@@ -2432,7 +2432,7 @@ where [refTable].[PersonID] = ?</property>
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="RedirectRow"
-                      length="9"
+                      length="10"
                       lineageId="Package\Update People\Transform Columns.Outputs[Derived Column Output].Columns[IMDBIDNullHandled]"
                       name="IMDBIDNullHandled"
                       truncationRowDisposition="FailComponent">
@@ -2441,13 +2441,13 @@ where [refTable].[PersonID] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,9,1250)([ISNULL](#{Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]}) || #{Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]} == "" ? "Nieznane_" : #{Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]})</property>
+                          name="Expression">(DT_STR,10,1250)([ISNULL](#{Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]}) || #{Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]} == "" ? "Nieznane_" : #{Package\Update People\People.Outputs[Flat File Source Output].Columns[IMDBID]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,9,1250)(ISNULL(IMDBID) || IMDBID == "" ? "Nieznane_" : IMDBID)</property>
+                          name="FriendlyExpression">(DT_STR,10,1250)(ISNULL(IMDBID) || IMDBID == "" ? "Nieznane_" : IMDBID)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -2725,13 +2725,21 @@ where PersonID = ? and Status = 'Curr'</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="124,42"
+          Id="Package\callToApi"
+          TopLeft="431,169" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Clean up"
+          TopLeft="433,334" />
+        <NodeLayout
           Size="148,42"
           Id="Package\Get People ID"
           TopLeft="420,86" />
         <NodeLayout
-          Size="124,42"
-          Id="Package\callToApi"
-          TopLeft="431,169" />
+          Size="152,42"
+          Id="Package\Update People"
+          TopLeft="413,248" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="493.5,128">
@@ -2754,14 +2762,6 @@ where PersonID = ? and Status = 'Curr'</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="123,42"
-          Id="Package\Clean up"
-          TopLeft="433,334" />
-        <NodeLayout
-          Size="152,42"
-          Id="Package\Update People"
-          TopLeft="413,248" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="491,211">
@@ -2813,7 +2813,7 @@ where PersonID = ? and Status = 'Curr'</property>
     design-time-name="Package\Get People ID">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="169,42"
           Id="Package\Get People ID\Flat File People ID"
@@ -2841,7 +2841,9 @@ where PersonID = ? and Status = 'Curr'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2861,14 +2863,6 @@ where PersonID = ? and Status = 'Curr'</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="113,42"
-          Id="Package\Update People\People"
-          TopLeft="158,51" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Update People\Insert People Error"
-          TopLeft="138,541" />
-        <NodeLayout
           Size="208,42"
           Id="Package\Update People\Insert New Person Record"
           TopLeft="114,450" />
@@ -2877,13 +2871,57 @@ where PersonID = ? and Status = 'Curr'</property>
           Id="Package\Update People\Transform Columns"
           TopLeft="131,119" />
         <NodeLayout
-          Size="176,42"
-          Id="Package\Update People\Flat File Destination"
-          TopLeft="423,117" />
-        <NodeLayout
           Size="161,42"
           Id="Package\Update People\Is Already In DW"
           TopLeft="139,201" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Update People\People"
+          TopLeft="158,51" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Update People\Flat File Update Error"
+          TopLeft="445,281" />
+        <NodeLayout
+          Size="210,42"
+          Id="Package\Update People\Update ValidTo and Status"
+          TopLeft="115,287" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Update People\Insert People Error"
+          TopLeft="138,541" />
+        <NodeLayout
+          Size="254,42"
+          Id="Package\Update People\Create ValidTo and Status Columns"
+          TopLeft="98,368" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Update People\Flat File Destination"
+          TopLeft="423,117" />
+        <EdgeLayout
+          Id="Package\Update People.Paths[Lookup Match Output]"
+          TopLeft="219.75,243">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,12.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Update People.Paths[Flat File Source Output]"
           TopLeft="216.75,93">
@@ -2898,6 +2936,50 @@ where PersonID = ? and Status = 'Curr'</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update People.Paths[Derived Column Output1]"
+          TopLeft="221.5,410">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update People.Paths[Derived Column Output]"
+          TopLeft="219.25,161">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2955,60 +3037,6 @@ where PersonID = ? and Status = 'Curr'</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Update People.Paths[Derived Column Output]"
-          TopLeft="219.25,161">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40"
-              Start="0,0"
-              End="0,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="210,42"
-          Id="Package\Update People\Update ValidTo and Status"
-          TopLeft="115,287" />
-        <EdgeLayout
-          Id="Package\Update People.Paths[Lookup Match Output]"
-          TopLeft="219.75,243">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44"
-              Start="0,0"
-              End="0,36.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,12.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="254,42"
-          Id="Package\Update People\Create ValidTo and Status Columns"
-          TopLeft="98,368" />
-        <EdgeLayout
           Id="Package\Update People.Paths[OLE DB Command Output]"
           TopLeft="222.5,329">
           <EdgeLayout.Curve>
@@ -3030,32 +3058,6 @@ where PersonID = ? and Status = 'Curr'</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Update People.Paths[Derived Column Output1]"
-          TopLeft="221.5,410">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40"
-              Start="0,0"
-              End="0,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="184,42"
-          Id="Package\Update People\Flat File Update Error"
-          TopLeft="445,281" />
         <EdgeLayout
           Id="Package\Update People.Paths[OLE DB Command Error Output]"
           TopLeft="325,305">
@@ -3102,7 +3104,7 @@ where PersonID = ? and Status = 'Curr'</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3112,7 +3114,7 @@ where PersonID = ? and Status = 'Curr'</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

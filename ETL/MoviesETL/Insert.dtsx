@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="44"
-  DTS:VersionGUID="{B53163CB-06FF-4F71-91DA-5FEAADAA50FA}">
+  DTS:VersionBuild="64"
+  DTS:VersionGUID="{92BB97BC-83C5-452E-A8DD-93C72938A402}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -182,7 +182,7 @@
               DTS:DataType="302"
               DTS:TextQualified="True"
               DTS:ObjectName="Flat File Source Error Output Column"
-              DTS:DTSID="{D95FA14C-C1C6-446D-8485-EF049ABBF19D}"
+              DTS:DTSID="{4C8C6FCE-7DAC-4C76-8565-FD1B9BE9216E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -190,7 +190,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{AD60DA49-9497-41D6-86B2-39F18ABAEB6C}"
+              DTS:DTSID="{5BE0D2BE-BE5C-4EBD-8694-87BFBE6B89A3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -198,7 +198,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{C8251D17-EDCA-46B5-B4DB-D794652B8AAA}"
+              DTS:DTSID="{9B3392E8-6B09-4D5F-B233-7E941D196A04}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -476,8 +476,185 @@
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
               DTS:DataType="3"
+              DTS:TextQualified="True"
               DTS:ObjectName="PersonID"
-              DTS:DTSID="{DBF47C39-ABEF-45D6-A2F5-9ADD17D23B5D}"
+              DTS:DTSID="{BA30CBFA-08D3-4BFC-9A52-8B9A81320D31}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Error Lookup Language]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{93FC6B76-E160-45F6-BF52-EADCF328F392}"
+      DTS:ObjectName="Flat File Error Lookup Language">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\adria\Desktop\semestr_6\Hurtownie danych\projekt\ETL\Errors\lookup_language.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MovieID"
+              DTS:DTSID="{AAF4A3EE-270E-4430-8878-50517DB06A59}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MovieTitle"
+              DTS:DTSID="{920F1D69-1A34-4EDB-862F-9132A606C10E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OriginalLanguageCode"
+              DTS:DTSID="{B7492240-1928-418C-893D-F05759C26BD5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ReleaseDate"
+              DTS:DTSID="{04048DC3-1A1B-4D19-AEDF-A04778CA6E5F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Adult"
+              DTS:DTSID="{51935231-EF14-4998-A8DB-87CE0CE1549C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PrimaryGenreName"
+              DTS:DTSID="{3ABB1A08-2BA5-4236-BEA6-0505AD547F8C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SecondaryGenreName"
+              DTS:DTSID="{855D3F71-BD18-47B4-AA83-F6ED4B065636}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MinorGenreName"
+              DTS:DTSID="{B56D7F11-BCCF-4D6A-9D2A-6964C53FA6E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ReleaseDateID"
+              DTS:DTSID="{56BEF4BE-5DDD-4A89-AD37-FB0FF96467A9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AdultConverted"
+              DTS:DTSID="{A59BF51F-078C-47FE-80DD-F00044947D89}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OriginalLanguageCodeEnc"
+              DTS:DTSID="{A4AF131D-120D-43EE-961B-C29726CE859F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{2CF47E9A-62E8-418A-8FC8-A97FAF993A27}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{ABFD7484-94A1-49E7-8F65-A5905632F29B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Error Reading People CSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2F4C33E3-D899-404E-8F90-F849A7E4652D}"
+      DTS:ObjectName="Flat File Error Reading People CSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\adria\Desktop\semestr_6\Hurtownie danych\projekt\ETL\Errors\reading_poeple_csv.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Flat File Source Error Output Column"
+              DTS:DTSID="{988F94D8-8EAA-47C7-9D9C-2060931827AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{0C423FC8-1B5B-492A-977D-CA6612349FB7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{5E324456-E1D2-4768-AB01-5AEAB907184C}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -622,7 +799,7 @@
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
-          DTS:CodePage="1250"
+          DTS:CodePage="65001"
           DTS:ConnectionString="C:\Users\adria\Desktop\semestr_6\Hurtownie danych\projekt\ETL\Errors\insert_movie_details.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
@@ -631,7 +808,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="MovieID"
-              DTS:DTSID="{62C81889-F5A0-4FAD-8C6F-A3C071E45B2C}"
+              DTS:DTSID="{74FDAD19-2087-4B5A-901C-866F9BB5DFA0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -640,61 +817,61 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="MovieTitle"
-              DTS:DTSID="{161E5363-3655-4BA2-BD55-BDCE6E6012A1}"
+              DTS:DTSID="{A8B4923C-4304-4265-9C2B-65C824E1B27C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="2"
-              DTS:DataType="129"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="OriginalLanguageCode"
-              DTS:DTSID="{D66F5FFB-8E02-49E6-B948-49A054E05307}"
+              DTS:DTSID="{AE56A80E-81AF-44ED-9616-D7945699ABE8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ReleaseDate"
-              DTS:DTSID="{D8C89829-B760-432C-B744-071F51080156}"
+              DTS:DTSID="{EF4796B5-3240-4CAA-AE29-97C8E90F92EA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Adult"
-              DTS:DTSID="{7EBB8816-45FF-47C1-BBFE-9A3332A8E3EA}"
+              DTS:DTSID="{FC892B94-9770-4175-8D84-B1EDE1289141}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="20"
-              DTS:DataType="129"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="PrimaryGenreName"
-              DTS:DTSID="{8AF2C91E-24E2-4932-AC11-C99DA3039BAE}"
+              DTS:DTSID="{B1961A0B-4C4D-4476-884D-CE4D0D54B975}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="20"
-              DTS:DataType="129"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="SecondaryGenreName"
-              DTS:DTSID="{0CA541C9-48AB-494C-8A98-9352F8E891FE}"
+              DTS:DTSID="{33680C6C-9A78-475B-8E63-A096C59C31F8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="20"
-              DTS:DataType="129"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="MinorGenreName"
-              DTS:DTSID="{27BB17EB-471D-444D-92B9-36868D15DF0A}"
+              DTS:DTSID="{922900D5-1F4B-45F2-91EB-B8F6B23E97E4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -702,25 +879,34 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ReleaseDateID"
-              DTS:DTSID="{F2C0D3E8-9C12-4982-9DF4-83306002DC8F}"
+              DTS:DTSID="{D99A6085-9E3E-4842-A327-9ABD99885A5C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="3"
-              DTS:DataType="129"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="AdultConverted"
-              DTS:DTSID="{CC74544C-B743-4BD4-9E75-F29A27D2935E}"
+              DTS:DTSID="{A4D38D37-28E1-4A4E-8008-BF5CAE3A6D10}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OriginalLanguageCodeEnc"
+              DTS:DTSID="{D866A0B2-80FE-4C08-BFAE-4FED1AD9472C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="30"
-              DTS:DataType="129"
+              DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="OriginalLanguageName"
-              DTS:DTSID="{5BC208B8-8072-46B0-8AD6-A1499EFE57ED}"
+              DTS:ObjectName="CountryLanguageName"
+              DTS:DTSID="{3DB3D35E-E903-44FA-A36A-C7F0042CAB56}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -728,15 +914,24 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{1AFD6ADC-78B8-40BB-A588-524D0E8CB5CA}"
+              DTS:DTSID="{C894B244-6782-4366-9E8B-B80C85324AB5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{6465B76D-257F-4D49-AB42-A45D825A29C6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="3"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{A3CF8C65-D75A-42EA-B2FB-B4BD68B7AFD4}"
+              DTS:ObjectName="OriginalLanguageName"
+              DTS:DTSID="{A76A6EFD-1A3E-4B70-90FD-5B123D16C435}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1447,7 +1642,7 @@
               DTS:ColumnDelimiter="_x002C_"
               DTS:DataType="3"
               DTS:ObjectName="MovieID"
-              DTS:DTSID="{CBF30A5D-FFDE-43A3-B7A5-CEA6B3C9478C}"
+              DTS:DTSID="{4E33446C-64E5-4C34-988C-C04C5CE66699}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1456,7 +1651,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="MovieTitle"
-              DTS:DTSID="{B74BFC22-715A-4518-BDBE-265949F7D007}"
+              DTS:DTSID="{C9254575-7546-46D7-BBE6-C25323AD5515}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1465,7 +1660,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="OriginalLanguageCode"
-              DTS:DTSID="{D52F53F7-2640-412F-90B3-29725B00E9B6}"
+              DTS:DTSID="{A371DEDA-D6E1-4282-9CCA-BA791C18C8BD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1474,7 +1669,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ReleaseDate"
-              DTS:DTSID="{E41E526E-70C1-41D0-8994-BB7C2401E6C9}"
+              DTS:DTSID="{6B78FD0C-7FA7-4757-9BF5-21C874D914FF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1483,7 +1678,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Adult"
-              DTS:DTSID="{34E16C1E-32F1-4A01-B92E-310331D9E6EC}"
+              DTS:DTSID="{5D3283F4-DEAA-413D-B46F-BE8F0049418E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1492,7 +1687,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="PrimaryGenreName"
-              DTS:DTSID="{8F33EBA2-A8FB-48B9-87A0-5185D01596D6}"
+              DTS:DTSID="{7B1469D2-D353-4E68-AC9F-18DFF589AAD6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1501,7 +1696,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="SecondaryGenreName"
-              DTS:DTSID="{A0C804C3-559D-4090-AAC7-49F3FE5BC38A}"
+              DTS:DTSID="{B43F61A7-3B5D-467F-9A10-97BD390A5E35}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1510,7 +1705,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="MinorGenreName"
-              DTS:DTSID="{594F699A-30C4-484C-A389-15E7F54DD36A}"
+              DTS:DTSID="{A878666A-4CBC-482E-82A1-EFCE1953B75F}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1715,7 +1910,7 @@
               DTS:ColumnDelimiter="_x002C_"
               DTS:DataType="3"
               DTS:ObjectName="PersonID"
-              DTS:DTSID="{020F6B64-C3DA-4B99-8A58-5AFC4E0E8E74}"
+              DTS:DTSID="{51AAEEF2-B84E-409B-B163-E04C7AA7689F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1724,7 +1919,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Name"
-              DTS:DTSID="{6F0DE4BA-04B9-4296-9BCB-4854D6258344}"
+              DTS:DTSID="{64612C39-9AD0-4B87-B37A-48535BF2ECB6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1733,7 +1928,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Birthday"
-              DTS:DTSID="{50C70599-7F59-41EF-8D6F-19F800EE54B9}"
+              DTS:DTSID="{514A4384-9694-4772-8DCA-42848C10E004}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1742,7 +1937,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="KnownFor"
-              DTS:DTSID="{541D2E04-8B24-4953-BADE-C294705323E4}"
+              DTS:DTSID="{481F0C7D-678D-4138-9C8A-2CB643B30661}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1751,7 +1946,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Deathday"
-              DTS:DTSID="{192A8083-E77A-46DE-8BEB-7A10AF542076}"
+              DTS:DTSID="{E37B59CB-98E5-4F7A-9D74-54126D7D9DD0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1759,16 +1954,16 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Gender"
-              DTS:DTSID="{51226510-FD30-4D77-AEFE-8669D653DA6E}"
+              DTS:DTSID="{1E458F64-BE2A-42A0-A2A9-FA18EE011DFA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="9"
+              DTS:MaximumWidth="10"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="IMDBID"
-              DTS:DTSID="{487BDEFA-5C5A-4B4D-BD63-C686B34E47DE}"
+              DTS:DTSID="{93EEF453-553C-4F3B-B6D0-CAA5405A9530}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1776,7 +1971,7 @@
               DTS:MaximumWidth="50"
               DTS:DataType="130"
               DTS:ObjectName="PopularityString"
-              DTS:DTSID="{EFF5041B-1C4B-40FB-AF56-BEBEF4435182}"
+              DTS:DTSID="{C1FAD254-BB3E-4EA1-896E-EAFA20DE0EDF}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -3224,7 +3419,7 @@ where [refTable].[CountryCode] = ?</property>
                           refId="Package\InsertSequence\Get Existing Movies, People\People.Outputs[OLE DB Source Output].ExternalColumns[IMDBID]"
                           codePage="1250"
                           dataType="str"
-                          length="9"
+                          length="10"
                           name="IMDBID" />
                         <externalMetadataColumn
                           refId="Package\InsertSequence\Get Existing Movies, People\People.Outputs[OLE DB Source Output].ExternalColumns[Popularity]"
@@ -3650,62 +3845,62 @@ where [refTable].[CountryCode] = ?</property>
                               cachedDataType="i4"
                               cachedName="MovieID"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[MovieID]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[MovieID]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MovieID]" />
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].Columns[MovieTitle]"
                               cachedDataType="wstr"
                               cachedLength="100"
                               cachedName="MovieTitle"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[MovieTitle]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[MovieTitle]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MovieTitle]" />
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].Columns[OriginalLanguageCode]"
                               cachedDataType="wstr"
                               cachedLength="2"
                               cachedName="OriginalLanguageCode"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[OriginalLanguageCode]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[OriginalLanguageCode]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[OriginalLanguageCode]" />
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].Columns[ReleaseDate]"
                               cachedDataType="wstr"
                               cachedLength="50"
                               cachedName="ReleaseDate"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[ReleaseDate]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[ReleaseDate]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[ReleaseDate]" />
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].Columns[Adult]"
                               cachedDataType="wstr"
                               cachedLength="50"
                               cachedName="Adult"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[Adult]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[Adult]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[Adult]" />
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].Columns[PrimaryGenreName]"
                               cachedDataType="wstr"
                               cachedLength="20"
                               cachedName="PrimaryGenreName"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[PrimaryGenreName]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[PrimaryGenreName]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[PrimaryGenreName]" />
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].Columns[SecondaryGenreName]"
                               cachedDataType="wstr"
                               cachedLength="20"
                               cachedName="SecondaryGenreName"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[SecondaryGenreName]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[SecondaryGenreName]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[SecondaryGenreName]" />
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].Columns[MinorGenreName]"
                               cachedDataType="wstr"
                               cachedLength="20"
                               cachedName="MinorGenreName"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[MinorGenreName]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[MinorGenreName]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MinorGenreName]" />
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].Columns[ReleaseDateID]"
                               cachedDataType="i4"
                               cachedName="ReleaseDateID"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[ReleaseDateID]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Transform Date Adult Columns.Outputs[Derived Column Output].Columns[ReleaseDateID]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[ReleaseDateID]" />
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].Columns[AdultConverted]"
                               cachedCodepage="1250"
@@ -3713,15 +3908,23 @@ where [refTable].[CountryCode] = ?</property>
                               cachedLength="3"
                               cachedName="AdultConverted"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[AdultConverted]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Transform Date Adult Columns.Outputs[Derived Column Output].Columns[AdultConverted]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[AdultConverted]" />
                             <inputColumn
-                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].Columns[OriginalLanguageName]"
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].Columns[OriginalLanguageCodeEnc]"
+                              cachedCodepage="1250"
+                              cachedDataType="str"
+                              cachedLength="2"
+                              cachedName="OriginalLanguageCodeEnc"
+                              externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[OriginalLanguageCodeEnc]"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[OriginalLanguageCodeEnc]" />
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].Columns[CountryLanguageName]"
                               cachedCodepage="1250"
                               cachedDataType="str"
                               cachedLength="30"
-                              cachedName="OriginalLanguageName"
-                              externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[OriginalLanguageName]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Lookup Language Name.Outputs[Lookup Match Output].Columns[OriginalLanguageName]" />
+                              cachedName="CountryLanguageName"
+                              externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[CountryLanguageName]"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[CountryLanguageName]" />
                           </inputColumns>
                           <externalMetadataColumns
                             isUsed="True">
@@ -3744,38 +3947,32 @@ where [refTable].[CountryCode] = ?</property>
                               name="MovieTitle" />
                             <externalMetadataColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[OriginalLanguageCode]"
-                              codePage="1250"
-                              dataType="str"
+                              dataType="wstr"
                               length="2"
                               name="OriginalLanguageCode" />
                             <externalMetadataColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[ReleaseDate]"
-                              codePage="1250"
-                              dataType="str"
+                              dataType="wstr"
                               length="50"
                               name="ReleaseDate" />
                             <externalMetadataColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[Adult]"
-                              codePage="1250"
-                              dataType="str"
+                              dataType="wstr"
                               length="50"
                               name="Adult" />
                             <externalMetadataColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[PrimaryGenreName]"
-                              codePage="1250"
-                              dataType="str"
+                              dataType="wstr"
                               length="20"
                               name="PrimaryGenreName" />
                             <externalMetadataColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[SecondaryGenreName]"
-                              codePage="1250"
-                              dataType="str"
+                              dataType="wstr"
                               length="20"
                               name="SecondaryGenreName" />
                             <externalMetadataColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[MinorGenreName]"
-                              codePage="1250"
-                              dataType="str"
+                              dataType="wstr"
                               length="20"
                               name="MinorGenreName" />
                             <externalMetadataColumn
@@ -3784,16 +3981,24 @@ where [refTable].[CountryCode] = ?</property>
                               name="ReleaseDateID" />
                             <externalMetadataColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[AdultConverted]"
-                              codePage="1250"
-                              dataType="str"
+                              dataType="wstr"
                               length="3"
                               name="AdultConverted" />
                             <externalMetadataColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[OriginalLanguageName]"
-                              codePage="1250"
-                              dataType="str"
+                              dataType="wstr"
                               length="30"
                               name="OriginalLanguageName" />
+                            <externalMetadataColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[OriginalLanguageCodeEnc]"
+                              dataType="wstr"
+                              length="50"
+                              name="OriginalLanguageCodeEnc" />
+                            <externalMetadataColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input].ExternalColumns[CountryLanguageName]"
+                              dataType="wstr"
+                              length="30"
+                              name="CountryLanguageName" />
                           </externalMetadataColumns>
                         </input>
                       </inputs>
@@ -3884,7 +4089,7 @@ where [refTable].[MovieID] = ?</property>
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Is Already In DW.Inputs[Lookup Input].Columns[MovieID]"
                               cachedDataType="i4"
                               cachedName="MovieID"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[MovieID]">
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MovieID]">
                               <properties>
                                 <property
                                   dataType="System.String"
@@ -3995,7 +4200,7 @@ where [refTable].[CountryLanguageCode] = ?</property>
                           dataType="System.Int32"
                           description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                           name="NoMatchBehavior"
-                          typeConverter="LookupNoMatchBehavior">0</property>
+                          typeConverter="LookupNoMatchBehavior">1</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -4065,7 +4270,6 @@ where [refTable].[CountryLanguageCode] = ?</property>
                         <output
                           refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Lookup Language Name.Outputs[Lookup Match Output]"
                           errorOrTruncationOperation="Lookup"
-                          errorRowDisposition="FailComponent"
                           exclusionGroup="1"
                           name="Lookup Match Output"
                           synchronousInputId="Package\InsertSequence\Insert Dims\Insert Movies Details\Lookup Language Name.Inputs[Lookup Input]">
@@ -4469,49 +4673,41 @@ where [refTable].[CountryLanguageCode] = ?</property>
                               cachedDataType="i4"
                               cachedName="MovieID"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MovieID]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[MovieID]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MovieID]" />
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MovieTitle]"
                               cachedDataType="wstr"
                               cachedLength="100"
                               cachedName="MovieTitle"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MovieTitle]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[MovieTitle]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MovieTitle]" />
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PrimaryGenreName]"
                               cachedDataType="wstr"
                               cachedLength="20"
                               cachedName="PrimaryGenreName"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PrimaryGenreName]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[PrimaryGenreName]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[PrimaryGenreName]" />
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SecondaryGenreName]"
                               cachedDataType="wstr"
                               cachedLength="20"
                               cachedName="SecondaryGenreName"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SecondaryGenreName]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[SecondaryGenreName]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[SecondaryGenreName]" />
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MinorGenreName]"
                               cachedDataType="wstr"
                               cachedLength="20"
                               cachedName="MinorGenreName"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinorGenreName]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[MinorGenreName]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MinorGenreName]" />
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ReleaseDateID]"
                               cachedDataType="i4"
                               cachedName="ReleaseDateID"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReleaseDateID]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Transform Date Adult Columns.Outputs[Derived Column Output].Columns[ReleaseDateID]" />
-                            <inputColumn
-                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OriginalLanguageName]"
-                              cachedCodepage="1250"
-                              cachedDataType="str"
-                              cachedLength="30"
-                              cachedName="OriginalLanguageName"
-                              externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OriginalLanguage]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Lookup Language Name.Outputs[Lookup Match Output].Columns[OriginalLanguageName]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[ReleaseDateID]" />
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AdultConverted]"
                               cachedCodepage="1250"
@@ -4519,7 +4715,15 @@ where [refTable].[CountryLanguageCode] = ?</property>
                               cachedLength="3"
                               cachedName="AdultConverted"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Adult]"
-                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Transform Date Adult Columns.Outputs[Derived Column Output].Columns[AdultConverted]" />
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[AdultConverted]" />
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CountryLanguageName]"
+                              cachedCodepage="1250"
+                              cachedDataType="str"
+                              cachedLength="30"
+                              cachedName="CountryLanguageName"
+                              externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OriginalLanguage]"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[CountryLanguageName]" />
                           </inputColumns>
                           <externalMetadataColumns
                             isUsed="True">
@@ -4584,6 +4788,81 @@ where [refTable].[CountryLanguageCode] = ?</property>
                               refId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                               dataType="i4"
                               lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing"
+                      componentClassID="Microsoft.DerivedColumn"
+                      contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                      description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                      name="Set LanguageName to Missing"
+                      usesDispositions="true">
+                      <inputs>
+                        <input
+                          refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing.Inputs[Derived Column Input]"
+                          description="Input to the Derived Column Transformation"
+                          name="Derived Column Input">
+                          <externalMetadataColumns />
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing.Outputs[Derived Column Output]"
+                          description="Default Output of the Derived Column Transformation"
+                          exclusionGroup="1"
+                          name="Derived Column Output"
+                          synchronousInputId="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing.Inputs[Derived Column Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing.Outputs[Derived Column Output].Columns[OriginalLanguageName]"
+                              codePage="1250"
+                              dataType="str"
+                              errorOrTruncationOperation="Computation"
+                              errorRowDisposition="FailComponent"
+                              length="30"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing.Outputs[Derived Column Output].Columns[OriginalLanguageName]"
+                              name="OriginalLanguageName"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.String"
+                                  description="Derived Column Expression"
+                                  name="Expression">(DT_STR,30,1250)"Nieznane"</property>
+                                <property
+                                  containsID="true"
+                                  dataType="System.String"
+                                  description="Derived Column Friendly Expression"
+                                  expressionType="Notify"
+                                  name="FriendlyExpression">(DT_STR,30,1250)"Nieznane"</property>
+                              </properties>
+                            </outputColumn>
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                        <output
+                          refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing.Outputs[Derived Column Error Output]"
+                          description="Error Output of the Derived Column Transformation"
+                          exclusionGroup="1"
+                          isErrorOut="true"
+                          name="Derived Column Error Output"
+                          synchronousInputId="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing.Inputs[Derived Column Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                               name="ErrorColumn"
                               specialFlags="2" />
                           </outputColumns>
@@ -4732,6 +5011,459 @@ where [refTable].[CountryLanguageCode] = ?</property>
                         </output>
                       </outputs>
                     </component>
+                    <component
+                      refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All"
+                      componentClassID="Microsoft.UnionAll"
+                      contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                      description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+                      name="Union All"
+                      version="1">
+                      <inputs>
+                        <input
+                          refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 3]"
+                          hasSideEffects="true"
+                          name="Union All Input 3">
+                          <inputColumns>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 3].Columns[MovieID]"
+                              cachedDataType="i4"
+                              cachedName="MovieID"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[MovieID]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MovieID]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 3].Columns[MovieTitle]"
+                              cachedDataType="wstr"
+                              cachedLength="100"
+                              cachedName="MovieTitle"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[MovieTitle]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MovieTitle]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 3].Columns[OriginalLanguageCode]"
+                              cachedDataType="wstr"
+                              cachedLength="2"
+                              cachedName="OriginalLanguageCode"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[OriginalLanguageCode]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[OriginalLanguageCode]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 3].Columns[ReleaseDate]"
+                              cachedDataType="wstr"
+                              cachedLength="50"
+                              cachedName="ReleaseDate"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[ReleaseDate]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[ReleaseDate]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 3].Columns[Adult]"
+                              cachedDataType="wstr"
+                              cachedLength="50"
+                              cachedName="Adult"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[Adult]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[Adult]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 3].Columns[PrimaryGenreName]"
+                              cachedDataType="wstr"
+                              cachedLength="20"
+                              cachedName="PrimaryGenreName"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[PrimaryGenreName]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[PrimaryGenreName]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 3].Columns[SecondaryGenreName]"
+                              cachedDataType="wstr"
+                              cachedLength="20"
+                              cachedName="SecondaryGenreName"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[SecondaryGenreName]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[SecondaryGenreName]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 3].Columns[MinorGenreName]"
+                              cachedDataType="wstr"
+                              cachedLength="20"
+                              cachedName="MinorGenreName"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[MinorGenreName]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MinorGenreName]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 3].Columns[ReleaseDateID]"
+                              cachedDataType="i4"
+                              cachedName="ReleaseDateID"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Transform Date Adult Columns.Outputs[Derived Column Output].Columns[ReleaseDateID]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[ReleaseDateID]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 3].Columns[AdultConverted]"
+                              cachedCodepage="1250"
+                              cachedDataType="str"
+                              cachedLength="3"
+                              cachedName="AdultConverted"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Transform Date Adult Columns.Outputs[Derived Column Output].Columns[AdultConverted]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[AdultConverted]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 3].Columns[OriginalLanguageCodeEnc]"
+                              cachedCodepage="1250"
+                              cachedDataType="str"
+                              cachedLength="2"
+                              cachedName="OriginalLanguageCodeEnc"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Transform Date Adult Columns.Outputs[Derived Column Output].Columns[OriginalLanguageCodeEnc]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[OriginalLanguageCodeEnc]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 3].Columns[OriginalLanguageName]"
+                              cachedCodepage="1250"
+                              cachedDataType="str"
+                              cachedLength="30"
+                              cachedName="OriginalLanguageName"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Lookup Language Name.Outputs[Lookup Match Output].Columns[OriginalLanguageName]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[CountryLanguageName]}</property>
+                              </properties>
+                            </inputColumn>
+                          </inputColumns>
+                          <externalMetadataColumns />
+                        </input>
+                        <input
+                          refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 1]"
+                          hasSideEffects="true"
+                          name="Union All Input 1">
+                          <inputColumns>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 1].Columns[MovieID]"
+                              cachedDataType="i4"
+                              cachedName="MovieID"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[MovieID]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MovieID]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 1].Columns[MovieTitle]"
+                              cachedDataType="wstr"
+                              cachedLength="100"
+                              cachedName="MovieTitle"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[MovieTitle]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MovieTitle]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 1].Columns[OriginalLanguageCode]"
+                              cachedDataType="wstr"
+                              cachedLength="2"
+                              cachedName="OriginalLanguageCode"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[OriginalLanguageCode]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[OriginalLanguageCode]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 1].Columns[ReleaseDate]"
+                              cachedDataType="wstr"
+                              cachedLength="50"
+                              cachedName="ReleaseDate"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[ReleaseDate]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[ReleaseDate]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 1].Columns[Adult]"
+                              cachedDataType="wstr"
+                              cachedLength="50"
+                              cachedName="Adult"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[Adult]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[Adult]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 1].Columns[PrimaryGenreName]"
+                              cachedDataType="wstr"
+                              cachedLength="20"
+                              cachedName="PrimaryGenreName"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[PrimaryGenreName]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[PrimaryGenreName]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 1].Columns[SecondaryGenreName]"
+                              cachedDataType="wstr"
+                              cachedLength="20"
+                              cachedName="SecondaryGenreName"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[SecondaryGenreName]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[SecondaryGenreName]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 1].Columns[MinorGenreName]"
+                              cachedDataType="wstr"
+                              cachedLength="20"
+                              cachedName="MinorGenreName"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output].Columns[MinorGenreName]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MinorGenreName]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 1].Columns[ReleaseDateID]"
+                              cachedDataType="i4"
+                              cachedName="ReleaseDateID"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Transform Date Adult Columns.Outputs[Derived Column Output].Columns[ReleaseDateID]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[ReleaseDateID]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 1].Columns[AdultConverted]"
+                              cachedCodepage="1250"
+                              cachedDataType="str"
+                              cachedLength="3"
+                              cachedName="AdultConverted"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Transform Date Adult Columns.Outputs[Derived Column Output].Columns[AdultConverted]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[AdultConverted]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 1].Columns[OriginalLanguageCodeEnc]"
+                              cachedCodepage="1250"
+                              cachedDataType="str"
+                              cachedLength="2"
+                              cachedName="OriginalLanguageCodeEnc"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Transform Date Adult Columns.Outputs[Derived Column Output].Columns[OriginalLanguageCodeEnc]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[OriginalLanguageCodeEnc]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 1].Columns[OriginalLanguageName]"
+                              cachedCodepage="1250"
+                              cachedDataType="str"
+                              cachedLength="30"
+                              cachedName="OriginalLanguageName"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing.Outputs[Derived Column Output].Columns[OriginalLanguageName]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[CountryLanguageName]}</property>
+                              </properties>
+                            </inputColumn>
+                          </inputColumns>
+                          <externalMetadataColumns />
+                        </input>
+                        <input
+                          refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 2]"
+                          dangling="true"
+                          hasSideEffects="true"
+                          name="Union All Input 2">
+                          <externalMetadataColumns />
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1]"
+                          name="Union All Output 1">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MovieID]"
+                              dataType="i4"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MovieID]"
+                              name="MovieID" />
+                            <outputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MovieTitle]"
+                              dataType="wstr"
+                              length="100"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MovieTitle]"
+                              name="MovieTitle" />
+                            <outputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[OriginalLanguageCode]"
+                              dataType="wstr"
+                              length="2"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[OriginalLanguageCode]"
+                              name="OriginalLanguageCode" />
+                            <outputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[ReleaseDate]"
+                              dataType="wstr"
+                              length="50"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[ReleaseDate]"
+                              name="ReleaseDate" />
+                            <outputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[Adult]"
+                              dataType="wstr"
+                              length="50"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[Adult]"
+                              name="Adult" />
+                            <outputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[PrimaryGenreName]"
+                              dataType="wstr"
+                              length="20"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[PrimaryGenreName]"
+                              name="PrimaryGenreName" />
+                            <outputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[SecondaryGenreName]"
+                              dataType="wstr"
+                              length="20"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[SecondaryGenreName]"
+                              name="SecondaryGenreName" />
+                            <outputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MinorGenreName]"
+                              dataType="wstr"
+                              length="20"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[MinorGenreName]"
+                              name="MinorGenreName" />
+                            <outputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[ReleaseDateID]"
+                              dataType="i4"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[ReleaseDateID]"
+                              name="ReleaseDateID" />
+                            <outputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[AdultConverted]"
+                              codePage="1250"
+                              dataType="str"
+                              length="3"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[AdultConverted]"
+                              name="AdultConverted" />
+                            <outputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[OriginalLanguageCodeEnc]"
+                              codePage="1250"
+                              dataType="str"
+                              length="2"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[OriginalLanguageCodeEnc]"
+                              name="OriginalLanguageCodeEnc" />
+                            <outputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[CountryLanguageName]"
+                              codePage="1250"
+                              dataType="str"
+                              length="30"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1].Columns[CountryLanguageName]"
+                              name="CountryLanguageName" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
                   </components>
                   <paths>
                     <path
@@ -4739,6 +5471,11 @@ where [refTable].[CountryLanguageCode] = ?</property>
                       endId="Package\InsertSequence\Insert Dims\Insert Movies Details\Lookup Language Name.Inputs[Lookup Input]"
                       name="Derived Column Output"
                       startId="Package\InsertSequence\Insert Dims\Insert Movies Details\Transform Date Adult Columns.Outputs[Derived Column Output]" />
+                    <path
+                      refId="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Derived Column Output1]"
+                      endId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 1]"
+                      name="Derived Column Output"
+                      startId="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing.Outputs[Derived Column Output]" />
                     <path
                       refId="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Flat File Source Error Output]"
                       endId="Package\InsertSequence\Insert Dims\Insert Movies Details\Flat File Destination.Inputs[Flat File Destination Input]"
@@ -4751,11 +5488,16 @@ where [refTable].[CountryLanguageCode] = ?</property>
                       startId="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails.Outputs[Flat File Source Output]" />
                     <path
                       refId="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Lookup Match Output]"
-                      endId="Package\InsertSequence\Insert Dims\Insert Movies Details\Is Already In DW.Inputs[Lookup Input]"
+                      endId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Inputs[Union All Input 3]"
                       name="Lookup Match Output"
                       startId="Package\InsertSequence\Insert Dims\Insert Movies Details\Lookup Language Name.Outputs[Lookup Match Output]" />
                     <path
                       refId="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Lookup No Match Output]"
+                      endId="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing.Inputs[Derived Column Input]"
+                      name="Lookup No Match Output"
+                      startId="Package\InsertSequence\Insert Dims\Insert Movies Details\Lookup Language Name.Outputs[Lookup No Match Output]" />
+                    <path
+                      refId="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Lookup No Match Output1]"
                       endId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Inputs[OLE DB Destination Input]"
                       name="Lookup No Match Output"
                       startId="Package\InsertSequence\Insert Dims\Insert Movies Details\Is Already In DW.Outputs[Lookup No Match Output]" />
@@ -4764,6 +5506,11 @@ where [refTable].[CountryLanguageCode] = ?</property>
                       endId="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error.Inputs[Flat File Destination Input]"
                       name="OLE DB Destination Error Output"
                       startId="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination.Outputs[OLE DB Destination Error Output]" />
+                    <path
+                      refId="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Union All Output 1]"
+                      endId="Package\InsertSequence\Insert Dims\Insert Movies Details\Is Already In DW.Inputs[Lookup Input]"
+                      name="Union All Output 1"
+                      startId="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All.Outputs[Union All Output 1]" />
                   </paths>
                 </pipeline>
               </DTS:ObjectData>
@@ -4861,7 +5608,7 @@ where [refTable].[CountryLanguageCode] = ?</property>
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination.Inputs[Flat File Destination Input].Columns[IMDBID]"
                               cachedDataType="wstr"
-                              cachedLength="9"
+                              cachedLength="10"
                               cachedName="IMDBID"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[IMDBID]"
                               lineageId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[IMDBID]" />
@@ -4936,6 +5683,81 @@ where [refTable].[CountryLanguageCode] = ?</property>
                               name="ErrorCode" />
                             <externalMetadataColumn
                               refId="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                              dataType="i4"
+                              name="ErrorColumn" />
+                          </externalMetadataColumns>
+                        </input>
+                      </inputs>
+                    </component>
+                    <component
+                      refId="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination 1"
+                      componentClassID="Microsoft.FlatFileDestination"
+                      contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                      description="Flat File Destination"
+                      localeId="1045"
+                      name="Flat File Destination 1"
+                      version="1">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Specifies whether the data will overwrite or append to the destination file."
+                          name="Overwrite">true</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the text to write to the destination file before any data is written."
+                          expressionType="Notify"
+                          name="Header" />
+                        <property
+                          dataType="System.Boolean"
+                          description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                          name="EscapeQualifier">false</property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination 1.Connections[FlatFileConnection]"
+                          connectionManagerID="Package.ConnectionManagers[Flat File Error Reading People CSV]"
+                          connectionManagerRefId="Package.ConnectionManagers[Flat File Error Reading People CSV]"
+                          name="FlatFileConnection" />
+                      </connections>
+                      <inputs>
+                        <input
+                          refId="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination 1.Inputs[Flat File Destination Input]"
+                          hasSideEffects="true"
+                          name="Flat File Destination Input">
+                          <inputColumns>
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[Flat File Source Error Output Column]"
+                              cachedCodepage="1250"
+                              cachedDataType="text"
+                              cachedName="Flat File Source Error Output Column"
+                              externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Flat File Source Error Output Column]"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]" />
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                              cachedDataType="i4"
+                              cachedName="ErrorCode"
+                              externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Error Output].Columns[ErrorCode]" />
+                            <inputColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                              cachedDataType="i4"
+                              cachedName="ErrorColumn"
+                              externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                              lineageId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Error Output].Columns[ErrorColumn]" />
+                          </inputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Flat File Source Error Output Column]"
+                              dataType="wstr"
+                              length="50"
+                              name="Flat File Source Error Output Column" />
+                            <externalMetadataColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                              dataType="i4"
+                              name="ErrorCode" />
+                            <externalMetadataColumn
+                              refId="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
                               dataType="i4"
                               name="ErrorColumn" />
                           </externalMetadataColumns>
@@ -5021,7 +5843,7 @@ where [refTable].[CountryLanguageCode] = ?</property>
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert People\Insert People Error.Inputs[Flat File Destination Input].Columns[IMDBID]"
                               cachedDataType="wstr"
-                              cachedLength="9"
+                              cachedLength="10"
                               cachedName="IMDBID"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[IMDBID]"
                               lineageId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[IMDBID]" />
@@ -5075,7 +5897,7 @@ where [refTable].[CountryLanguageCode] = ?</property>
                               refId="Package\InsertSequence\Insert Dims\Insert People\Insert People Error.Inputs[Flat File Destination Input].Columns[IMDBIDNullHandled]"
                               cachedCodepage="1250"
                               cachedDataType="str"
-                              cachedLength="9"
+                              cachedLength="10"
                               cachedName="IMDBIDNullHandled"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert People\Insert People Error.Inputs[Flat File Destination Input].ExternalColumns[IMDBIDNullHandled]"
                               lineageId="Package\InsertSequence\Insert Dims\Insert People\Transform Columns.Outputs[Derived Column Output].Columns[IMDBIDNullHandled]" />
@@ -5475,7 +6297,7 @@ where [refTable].[PersonID] = ?</property>
                               refId="Package\InsertSequence\Insert Dims\Insert People\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IMDBIDNullHandled]"
                               cachedCodepage="1250"
                               cachedDataType="str"
-                              cachedLength="9"
+                              cachedLength="10"
                               cachedName="IMDBIDNullHandled"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert People\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IMDBID]"
                               lineageId="Package\InsertSequence\Insert Dims\Insert People\Transform Columns.Outputs[Derived Column Output].Columns[IMDBIDNullHandled]" />
@@ -5527,7 +6349,7 @@ where [refTable].[PersonID] = ?</property>
                               refId="Package\InsertSequence\Insert Dims\Insert People\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IMDBID]"
                               codePage="1250"
                               dataType="str"
-                              length="9"
+                              length="10"
                               name="IMDBID" />
                             <externalMetadataColumn
                               refId="Package\InsertSequence\Insert Dims\Insert People\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Popularity]"
@@ -5610,11 +6432,11 @@ where [refTable].[PersonID] = ?</property>
                               refId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[PersonID]"
                               dataType="i4"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].ExternalColumns[PersonID]"
                               lineageId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[PersonID]"
                               name="PersonID"
-                              truncationRowDisposition="FailComponent">
+                              truncationRowDisposition="RedirectRow">
                               <properties>
                                 <property
                                   dataType="System.Boolean"
@@ -5630,12 +6452,12 @@ where [refTable].[PersonID] = ?</property>
                               refId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[Name]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].ExternalColumns[Name]"
                               length="100"
                               lineageId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[Name]"
                               name="Name"
-                              truncationRowDisposition="FailComponent">
+                              truncationRowDisposition="RedirectRow">
                               <properties>
                                 <property
                                   dataType="System.Boolean"
@@ -5651,12 +6473,12 @@ where [refTable].[PersonID] = ?</property>
                               refId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[Birthday]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].ExternalColumns[Birthday]"
                               length="50"
                               lineageId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[Birthday]"
                               name="Birthday"
-                              truncationRowDisposition="FailComponent">
+                              truncationRowDisposition="RedirectRow">
                               <properties>
                                 <property
                                   dataType="System.Boolean"
@@ -5672,12 +6494,12 @@ where [refTable].[PersonID] = ?</property>
                               refId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[KnownFor]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].ExternalColumns[KnownFor]"
                               length="50"
                               lineageId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[KnownFor]"
                               name="KnownFor"
-                              truncationRowDisposition="FailComponent">
+                              truncationRowDisposition="RedirectRow">
                               <properties>
                                 <property
                                   dataType="System.Boolean"
@@ -5693,12 +6515,12 @@ where [refTable].[PersonID] = ?</property>
                               refId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[Deathday]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].ExternalColumns[Deathday]"
                               length="50"
                               lineageId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[Deathday]"
                               name="Deathday"
-                              truncationRowDisposition="FailComponent">
+                              truncationRowDisposition="RedirectRow">
                               <properties>
                                 <property
                                   dataType="System.Boolean"
@@ -5714,11 +6536,11 @@ where [refTable].[PersonID] = ?</property>
                               refId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[Gender]"
                               dataType="i4"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].ExternalColumns[Gender]"
                               lineageId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[Gender]"
                               name="Gender"
-                              truncationRowDisposition="FailComponent">
+                              truncationRowDisposition="RedirectRow">
                               <properties>
                                 <property
                                   dataType="System.Boolean"
@@ -5734,12 +6556,12 @@ where [refTable].[PersonID] = ?</property>
                               refId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[IMDBID]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].ExternalColumns[IMDBID]"
-                              length="9"
+                              length="10"
                               lineageId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[IMDBID]"
                               name="IMDBID"
-                              truncationRowDisposition="FailComponent">
+                              truncationRowDisposition="RedirectRow">
                               <properties>
                                 <property
                                   dataType="System.Boolean"
@@ -5755,12 +6577,12 @@ where [refTable].[PersonID] = ?</property>
                               refId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[PopularityString]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               externalMetadataColumnId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].ExternalColumns[PopularityString]"
                               length="50"
                               lineageId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[PopularityString]"
                               name="PopularityString"
-                              truncationRowDisposition="FailComponent">
+                              truncationRowDisposition="RedirectRow">
                               <properties>
                                 <property
                                   dataType="System.Boolean"
@@ -5806,7 +6628,7 @@ where [refTable].[PersonID] = ?</property>
                             <externalMetadataColumn
                               refId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].ExternalColumns[IMDBID]"
                               dataType="wstr"
-                              length="9"
+                              length="10"
                               name="IMDBID" />
                             <externalMetadataColumn
                               refId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].ExternalColumns[PopularityString]"
@@ -5877,7 +6699,7 @@ where [refTable].[PersonID] = ?</property>
                             <inputColumn
                               refId="Package\InsertSequence\Insert Dims\Insert People\Transform Columns.Inputs[Derived Column Input].Columns[IMDBID]"
                               cachedDataType="wstr"
-                              cachedLength="9"
+                              cachedLength="10"
                               cachedName="IMDBID"
                               lineageId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[IMDBID]" />
                             <inputColumn
@@ -6046,7 +6868,7 @@ where [refTable].[PersonID] = ?</property>
                               dataType="str"
                               errorOrTruncationOperation="Computation"
                               errorRowDisposition="RedirectRow"
-                              length="9"
+                              length="10"
                               lineageId="Package\InsertSequence\Insert Dims\Insert People\Transform Columns.Outputs[Derived Column Output].Columns[IMDBIDNullHandled]"
                               name="IMDBIDNullHandled"
                               truncationRowDisposition="FailComponent">
@@ -6055,13 +6877,13 @@ where [refTable].[PersonID] = ?</property>
                                   containsID="true"
                                   dataType="System.String"
                                   description="Derived Column Expression"
-                                  name="Expression">(DT_STR,9,1250)([ISNULL](#{Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[IMDBID]}) || #{Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[IMDBID]} == "" ? "Nieznane_" : #{Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[IMDBID]})</property>
+                                  name="Expression">(DT_STR,10,1250)([ISNULL](#{Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[IMDBID]}) || #{Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[IMDBID]} == "" ? "Nieznane_" : #{Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Output].Columns[IMDBID]})</property>
                                 <property
                                   containsID="true"
                                   dataType="System.String"
                                   description="Derived Column Friendly Expression"
                                   expressionType="Notify"
-                                  name="FriendlyExpression">(DT_STR,9,1250)(ISNULL(IMDBID) || IMDBID == "" ? "Nieznane_" : IMDBID)</property>
+                                  name="FriendlyExpression">(DT_STR,10,1250)(ISNULL(IMDBID) || IMDBID == "" ? "Nieznane_" : IMDBID)</property>
                               </properties>
                             </outputColumn>
                             <outputColumn
@@ -6150,6 +6972,11 @@ where [refTable].[PersonID] = ?</property>
                       endId="Package\InsertSequence\Insert Dims\Insert People\Is Already In DW.Inputs[Lookup Input]"
                       name="Derived Column Output"
                       startId="Package\InsertSequence\Insert Dims\Insert People\Transform Columns.Outputs[Derived Column Output]" />
+                    <path
+                      refId="Package\InsertSequence\Insert Dims\Insert People.Paths[Flat File Source Error Output]"
+                      endId="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination 1.Inputs[Flat File Destination Input]"
+                      name="Flat File Source Error Output"
+                      startId="Package\InsertSequence\Insert Dims\Insert People\People.Outputs[Flat File Source Error Output]" />
                     <path
                       refId="Package\InsertSequence\Insert Dims\Insert People.Paths[Flat File Source Output]"
                       endId="Package\InsertSequence\Insert Dims\Insert People\Transform Columns.Inputs[Derived Column Input]"
@@ -9565,7 +10392,7 @@ where [refTable].[CountryCode] = ?</property>
         <NodeLayout
           Size="181,42"
           Id="Package\InsertSequence\Insert Dims\Insert Movies Details"
-          TopLeft="13.5,100.5" />
+          TopLeft="13.5,99.5" />
         <NodeLayout
           Size="144,42"
           Id="Package\InsertSequence\Insert Dims\Insert People"
@@ -9576,14 +10403,14 @@ where [refTable].[CountryCode] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,24"
+              EndConnector="0,23"
               Start="0,0"
-              End="0,16.5">
+              End="0,15.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.5" />
+                    End="0,15.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9613,7 +10440,7 @@ where [refTable].[CountryCode] = ?</property>
           PanelSize="431,126"
           Size="431,169"
           Id="Package\InsertSequence\Insert Facts"
-          TopLeft="15,411" />
+          TopLeft="14,410" />
         <EdgeLayout
           Id="Package\InsertSequence.PrecedenceConstraints[Constraint]"
           TopLeft="317,66.5">
@@ -9638,18 +10465,18 @@ where [refTable].[CountryCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\InsertSequence.PrecedenceConstraints[Constraint 1]"
-          TopLeft="228,369">
+          TopLeft="227.5,369">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,42"
+              EndConnector="0,41"
               Start="0,0"
-              End="0,34.5">
+              End="0,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.5" />
+                    End="0,33.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9914,7 +10741,9 @@ where [refTable].[CountryCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9948,7 +10777,9 @@ where [refTable].[CountryCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9994,7 +10825,7 @@ where [refTable].[CountryCode] = ?</property>
     design-time-name="Package\InsertSequence\Get Existing Movies, People">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="113,42"
           Id="Package\InsertSequence\Get Existing Movies, People\People"
@@ -10022,9 +10853,7 @@ where [refTable].[CountryCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10047,7 +10876,7 @@ where [refTable].[CountryCode] = ?</property>
     design-time-name="Package\InsertSequence\Insert Dims\Cache Language Codes">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="157,42"
           Id="Package\InsertSequence\Insert Dims\Cache Language Codes\language codes"
@@ -10075,9 +10904,7 @@ where [refTable].[CountryCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10087,107 +10914,35 @@ where [refTable].[CountryCode] = ?</property>
     design-time-name="Package\InsertSequence\Insert Dims\Insert Movies Details">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="203,42"
           Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error"
-          TopLeft="259,414" />
+          TopLeft="452,504" />
         <NodeLayout
           Size="161,42"
           Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Is Already In DW"
-          TopLeft="282,262" />
+          TopLeft="475,352" />
         <NodeLayout
           Size="142,42"
           Id="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails"
           TopLeft="283.5,33" />
         <NodeLayout
+          Size="177,42"
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination"
+          TopLeft="464,427" />
+        <NodeLayout
           Size="199,42"
           Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Lookup Language Name"
-          TopLeft="259,184.75" />
+          TopLeft="258,183.75" />
         <NodeLayout
           Size="176,42"
           Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Flat File Destination"
           TopLeft="596,37" />
         <NodeLayout
-          Size="177,42"
-          Id="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination"
-          TopLeft="271,338" />
-        <NodeLayout
           Size="230,42"
           Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Transform Date Adult Columns"
           TopLeft="242,108" />
-        <EdgeLayout
-          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[OLE DB Destination Error Output]"
-          TopLeft="360,380">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-73.20890625,7.533203125,146.4178125,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Lookup No Match Output]"
-          TopLeft="361,304">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-64.6750390625,5.25,129.350078125,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Lookup Match Output]"
-          TopLeft="360.5,226.75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35.25"
-              Start="0,0"
-              End="0,27.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,8.0703125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Flat File Source Output]"
           TopLeft="355.75,75">
@@ -10207,9 +10962,7 @@ where [refTable].[CountryCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10238,25 +10991,207 @@ where [refTable].[CountryCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Derived Column Output]"
-          TopLeft="357.75,150">
+          TopLeft="357.25,150">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,34.75"
+              EndConnector="0,33.75"
               Start="0,0"
-              End="0,27.25">
+              End="0,26.25">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.25" />
+                    End="0,26.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="229,42"
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing"
+          TopLeft="548,151" />
+        <EdgeLayout
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Lookup No Match Output]"
+          TopLeft="457,204.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="91,-32.75"
+              Start="0,0"
+              End="83.5,-32.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="41.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41.5,0"
+                    Point2="45.5,0"
+                    Point3="45.5,-4" />
+                  <mssgle:LineSegment
+                    End="45.5,-28.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.5,-28.75"
+                    Point2="45.5,-32.75"
+                    Point3="49.5,-32.75" />
+                  <mssgle:LineSegment
+                    End="83.5,-32.75" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-10.30638671875,1,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="123,42"
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All"
+          TopLeft="499,286" />
+        <EdgeLayout
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Lookup Match Output]"
+          TopLeft="357.5,225.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="183.833333333333,60.25"
+              Start="0,0"
+              End="183.833333333333,52.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.6857945425361" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.6857945425361"
+                    Point2="0,35.6857945425361"
+                    Point3="4,35.6857945425361" />
+                  <mssgle:LineSegment
+                    End="179.833333333333,35.6857945425361" />
+                  <mssgle:CubicBezierSegment
+                    Point1="179.833333333333,35.6857945425361"
+                    Point2="183.833333333333,35.6857945425361"
+                    Point3="183.833333333333,39.6857945425361" />
+                  <mssgle:LineSegment
+                    End="183.833333333333,52.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="43.7252799479167,40.6857945425361,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Derived Column Output1]"
+          TopLeft="662.5,193">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-82.8333333333334,93"
+              Start="0,0"
+              End="-82.8333333333334,85.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.083467094703" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,51.083467094703"
+                    Point2="0,55.083467094703"
+                    Point3="-4,55.083467094703" />
+                  <mssgle:LineSegment
+                    End="-78.8333333333334,55.083467094703" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-78.8333333333334,55.083467094703"
+                    Point2="-82.8333333333334,55.083467094703"
+                    Point3="-82.8333333333334,59.083467094703" />
+                  <mssgle:LineSegment
+                    End="-82.8333333333334,85.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Union All Output 1]"
+          TopLeft="558,328">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24"
+              Start="0,0"
+              End="0,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Lookup No Match Output1]"
+          TopLeft="554,394">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,6.9453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[OLE DB Destination Error Output]"
+          TopLeft="553,469">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-73.20890625,8.033203125,146.4178125,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10265,16 +11200,6 @@ where [refTable].[CountryCode] = ?</property>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\InsertSequence\Insert Dims\Insert Movies Details\Is Already In DW">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\InsertSequence\Insert Dims\Insert Movies Details\Lookup Language Name">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -10293,6 +11218,16 @@ where [refTable].[CountryCode] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\InsertSequence\Insert Dims\Insert Movies Details\Lookup Language Name">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -10392,9 +11327,7 @@ where [refTable].[CountryCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10416,9 +11349,7 @@ where [refTable].[CountryCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10445,22 +11376,37 @@ where [refTable].[CountryCode] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="185,42"
+          Id="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination 1"
+          TopLeft="441,57" />
+        <EdgeLayout
+          Id="Package\InsertSequence\Insert Dims\Insert People.Paths[Flat File Source Error Output]"
+          TopLeft="271,75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="170,0"
+              Start="0,0"
+              End="162.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="162.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="8.75496093750002,5,144.990078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\InsertSequence\Insert Dims\Insert People\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\InsertSequence\Insert Dims\Insert People\Is Already In DW">
     <Properties>
@@ -10481,6 +11427,19 @@ where [refTable].[CountryCode] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\InsertSequence\Insert Dims\Insert People\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -10534,30 +11493,6 @@ where [refTable].[CountryCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\InsertSequence\Insert Facts\Insert MoviePeople.Paths[Lookup No Match Output]"
-          TopLeft="515.5,281">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,47"
-              Start="0,0"
-              End="0,39.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,13.9453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\InsertSequence\Insert Facts\Insert MoviePeople.Paths[Flat File Source Output]"
           TopLeft="516,107">
           <EdgeLayout.Curve>
@@ -10576,9 +11511,7 @@ where [refTable].[CountryCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10600,8 +11533,30 @@ where [refTable].[CountryCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\InsertSequence\Insert Facts\Insert MoviePeople.Paths[Lookup No Match Output]"
+          TopLeft="515.5,281">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47"
+              Start="0,0"
+              End="0,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-55.80638671875,13.9453125,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10712,9 +11667,7 @@ where [refTable].[CountryCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10904,9 +11857,7 @@ where [refTable].[CountryCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10928,9 +11879,7 @@ where [refTable].[CountryCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

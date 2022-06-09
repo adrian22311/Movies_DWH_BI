@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>MoviesETL</Name>
-    <LastWriteTime>2022-06-05T12:22:49.2068065Z</LastWriteTime>
+    <LastWriteTime>2022-06-09T19:30:20.9350565Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Insert.dtsx</Name>
-      <LastWriteTime>2022-06-05T12:38:15.1884338Z</LastWriteTime>
+      <LastWriteTime>2022-06-09T19:25:51.5801212Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -18,7 +18,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>UpdatePeople.dtsx</Name>
-      <LastWriteTime>2022-06-05T12:38:02.416729Z</LastWriteTime>
+      <LastWriteTime>2022-06-09T19:28:04.1725201Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
