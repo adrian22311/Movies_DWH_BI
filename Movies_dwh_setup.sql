@@ -55,7 +55,7 @@ create table People
 	KnownFor varchar(50) not null,
 	Deathday int not null foreign key references DateDimension(DateID),
 	Gender varchar(10) not null,
-	IMDBID char(9) not null,
+	IMDBID varchar(10) not null,
 	Popularity float not null,
 	ValidFrom datetime not null,
 	ValidTo datetime not null,
