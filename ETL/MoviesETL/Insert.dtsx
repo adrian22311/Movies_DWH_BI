@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="64"
-  DTS:VersionGUID="{92BB97BC-83C5-452E-A8DD-93C72938A402}">
+  DTS:VersionBuild="65"
+  DTS:VersionGUID="{2CD06B47-1FF8-48D1-AC90-6DE9CCAEE453}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -10916,33 +10916,125 @@ where [refTable].[CountryCode] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="203,42"
-          Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error"
-          TopLeft="452,504" />
-        <NodeLayout
           Size="161,42"
           Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Is Already In DW"
           TopLeft="475,352" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Insert Movie Details Error"
+          TopLeft="452,504" />
         <NodeLayout
           Size="142,42"
           Id="Package\InsertSequence\Insert Dims\Insert Movies Details\MovieDetails"
           TopLeft="283.5,33" />
         <NodeLayout
-          Size="177,42"
-          Id="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination"
-          TopLeft="464,427" />
+          Size="230,42"
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Transform Date Adult Columns"
+          TopLeft="242,108" />
         <NodeLayout
           Size="199,42"
           Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Lookup Language Name"
           TopLeft="258,183.75" />
         <NodeLayout
+          Size="123,42"
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All"
+          TopLeft="499,286" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination"
+          TopLeft="464,427" />
+        <NodeLayout
+          Size="229,42"
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing"
+          TopLeft="543,183" />
+        <NodeLayout
           Size="176,42"
           Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Flat File Destination"
           TopLeft="596,37" />
-        <NodeLayout
-          Size="230,42"
-          Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Transform Date Adult Columns"
-          TopLeft="242,108" />
+        <EdgeLayout
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Lookup No Match Output1]"
+          TopLeft="554,394">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,6.9453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Lookup No Match Output]"
+          TopLeft="457,204.375">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="86,0"
+              Start="0,0"
+              End="78.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="78.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-16.55638671875,5,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Lookup Match Output]"
+          TopLeft="357.5,225.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="183.833333333333,60.25"
+              Start="0,0"
+              End="183.833333333333,52.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.6857945425361" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.6857945425361"
+                    Point2="0,35.6857945425361"
+                    Point3="4,35.6857945425361" />
+                  <mssgle:LineSegment
+                    End="179.833333333333,35.6857945425361" />
+                  <mssgle:CubicBezierSegment
+                    Point1="179.833333333333,35.6857945425361"
+                    Point2="183.833333333333,35.6857945425361"
+                    Point3="183.833333333333,39.6857945425361" />
+                  <mssgle:LineSegment
+                    End="183.833333333333,52.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="43.7252799479167,40.6857945425361,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Flat File Source Output]"
           TopLeft="355.75,75">
@@ -10990,6 +11082,40 @@ where [refTable].[CountryCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Derived Column Output1]"
+          TopLeft="657.5,225">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-77.8333333333334,61"
+              Start="0,0"
+              End="-77.8333333333334,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.1300160513644" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.1300160513644"
+                    Point2="0,36.1300160513644"
+                    Point3="-4,36.1300160513644" />
+                  <mssgle:LineSegment
+                    End="-73.8333333333334,36.1300160513644" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-73.8333333333334,36.1300160513644"
+                    Point2="-77.8333333333334,36.1300160513644"
+                    Point3="-77.8333333333334,40.1300160513644" />
+                  <mssgle:LineSegment
+                    End="-77.8333333333334,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Derived Column Output]"
           TopLeft="357.25,150">
           <EdgeLayout.Curve>
@@ -11003,120 +11129,6 @@ where [refTable].[CountryCode] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,26.25" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="229,42"
-          Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Set LanguageName to Missing"
-          TopLeft="548,151" />
-        <EdgeLayout
-          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Lookup No Match Output]"
-          TopLeft="457,204.75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="91,-32.75"
-              Start="0,0"
-              End="83.5,-32.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="41.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="41.5,0"
-                    Point2="45.5,0"
-                    Point3="45.5,-4" />
-                  <mssgle:LineSegment
-                    End="45.5,-28.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="45.5,-28.75"
-                    Point2="45.5,-32.75"
-                    Point3="49.5,-32.75" />
-                  <mssgle:LineSegment
-                    End="83.5,-32.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-10.30638671875,1,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="123,42"
-          Id="Package\InsertSequence\Insert Dims\Insert Movies Details\Union All"
-          TopLeft="499,286" />
-        <EdgeLayout
-          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Lookup Match Output]"
-          TopLeft="357.5,225.75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="183.833333333333,60.25"
-              Start="0,0"
-              End="183.833333333333,52.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.6857945425361" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.6857945425361"
-                    Point2="0,35.6857945425361"
-                    Point3="4,35.6857945425361" />
-                  <mssgle:LineSegment
-                    End="179.833333333333,35.6857945425361" />
-                  <mssgle:CubicBezierSegment
-                    Point1="179.833333333333,35.6857945425361"
-                    Point2="183.833333333333,35.6857945425361"
-                    Point3="183.833333333333,39.6857945425361" />
-                  <mssgle:LineSegment
-                    End="183.833333333333,52.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="43.7252799479167,40.6857945425361,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Derived Column Output1]"
-          TopLeft="662.5,193">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-82.8333333333334,93"
-              Start="0,0"
-              End="-82.8333333333334,85.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.083467094703" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,51.083467094703"
-                    Point2="0,55.083467094703"
-                    Point3="-4,55.083467094703" />
-                  <mssgle:LineSegment
-                    End="-78.8333333333334,55.083467094703" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-78.8333333333334,55.083467094703"
-                    Point2="-82.8333333333334,55.083467094703"
-                    Point3="-82.8333333333334,59.083467094703" />
-                  <mssgle:LineSegment
-                    End="-82.8333333333334,85.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11145,30 +11157,6 @@ where [refTable].[CountryCode] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\InsertSequence\Insert Dims\Insert Movies Details.Paths[Lookup No Match Output1]"
-          TopLeft="554,394">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33"
-              Start="0,0"
-              End="0,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,6.9453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11209,6 +11197,16 @@ where [refTable].[CountryCode] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\InsertSequence\Insert Dims\Insert Movies Details\Lookup Language Name">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\InsertSequence\Insert Dims\Insert Movies Details\OLE DB Destination">
     <Properties>
       <Property>
@@ -11221,21 +11219,23 @@ where [refTable].[CountryCode] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\InsertSequence\Insert Dims\Insert Movies Details\Lookup Language Name">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\InsertSequence\Insert Dims\Insert People">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\InsertSequence\Insert Dims\Insert People\Transform Columns"
+          TopLeft="131,119" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\InsertSequence\Insert Dims\Insert People\Is Already In DW"
+          TopLeft="135,191" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination 1"
+          TopLeft="441,57" />
         <NodeLayout
           Size="113,42"
           Id="Package\InsertSequence\Insert Dims\Insert People\People"
@@ -11250,16 +11250,8 @@ where [refTable].[CountryCode] = ?</property>
           TopLeft="131,276" />
         <NodeLayout
           Size="176,42"
-          Id="Package\InsertSequence\Insert Dims\Insert People\Transform Columns"
-          TopLeft="131,119" />
-        <NodeLayout
-          Size="176,42"
           Id="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination"
           TopLeft="423,117" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\InsertSequence\Insert Dims\Insert People\Is Already In DW"
-          TopLeft="135,191" />
         <EdgeLayout
           Id="Package\InsertSequence\Insert Dims\Insert People.Paths[OLE DB Destination Error Output]"
           TopLeft="216,318">
@@ -11331,6 +11323,30 @@ where [refTable].[CountryCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\InsertSequence\Insert Dims\Insert People.Paths[Flat File Source Error Output]"
+          TopLeft="271,75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="170,0"
+              Start="0,0"
+              End="162.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="162.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="8.75496093750002,5,144.990078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\InsertSequence\Insert Dims\Insert People.Paths[Derived Column Output]"
           TopLeft="217.25,161">
           <EdgeLayout.Curve>
@@ -11373,34 +11389,6 @@ where [refTable].[CountryCode] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-19.5800390625,5,147.660078125,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="185,42"
-          Id="Package\InsertSequence\Insert Dims\Insert People\Flat File Destination 1"
-          TopLeft="441,57" />
-        <EdgeLayout
-          Id="Package\InsertSequence\Insert Dims\Insert People.Paths[Flat File Source Error Output]"
-          TopLeft="271,75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="170,0"
-              Start="0,0"
-              End="162.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="162.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="8.75496093750002,5,144.990078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

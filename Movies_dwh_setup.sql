@@ -99,6 +99,7 @@ create table MoviePeople
 	SKID int not null IDENTITY(1,1) primary key,
 	MovieID int not null foreign key references MovieDetails(MovieID),
 	PersonID int not null, --foreign key references People(PersonID),
+	ReleaseDate datetime not null,
 	PopularityOnRelease float not null,
 	Job varchar(50) not null,
 	Department varchar(30) not null
