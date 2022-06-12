@@ -19,29 +19,39 @@ def _get_number_of_votes(url):
 def get_info(imdb_url):
     page = requests.get(imdb_url)
     soup = BeautifulSoup(page.text, features="html.parser")
+    try:
+        rating_span = soup.find("span", {"sc-7ab21ed2-1 jGRxWM"})
+        rating = float(rating_span.text)
+    except:
+        rating = -1
 
-    rating_span = soup.find("span", {"sc-7ab21ed2-1 jGRxWM"})
-    rating = float(rating_span.text)
+    try:
+        a_counts = soup.findChild("a", {"aria-label": "View User Ratings"}, href=True)
+        split = urlsplit(imdb_url)
+        number_of_votes = _get_number_of_votes(split.scheme + "://" + split.netloc + a_counts["href"])
+    except:
+        number_of_votes = -1
 
-    a_counts = soup.findChild("a", {"aria-label": "View User Ratings"}, href=True)
-    split = urlsplit(imdb_url)
-    number_of_votes = _get_number_of_votes(split.scheme + "://" + split.netloc + a_counts["href"])
-
-    budget_li = soup.find("li", {"data-testid": "title-boxoffice-budget"})
-    budget_txt = budget_li.findChild(class_="ipc-metadata-list-item__list-content-item").text
-    budget_txt = budget_txt.split(maxsplit=1)[0].translate({ord(','): None, ord('$'): None})
-    budget = int(budget_txt)
-
-    gross_li = soup.find("li", {"data-testid": "title-boxoffice-cumulativeworldwidegross"})
-    gross_txt = gross_li.findChild(class_="ipc-metadata-list-item__list-content-item").text
-    gross_txt = gross_txt.split(maxsplit=1)[0].translate({ord(','): None, ord('$'): None})
-    gross = int(gross_txt)
+    try:
+        budget_li = soup.find("li", {"data-testid": "title-boxoffice-budget"})
+        budget_txt = budget_li.findChild(class_="ipc-metadata-list-item__list-content-item").text
+        budget_txt = budget_txt.split(maxsplit=1)[0].translate({ord(','): None, ord('$'): None})
+        budget = int(budget_txt)
+    except:
+        budget = -1
+    try:
+        gross_li = soup.find("li", {"data-testid": "title-boxoffice-cumulativeworldwidegross"})
+        gross_txt = gross_li.findChild(class_="ipc-metadata-list-item__list-content-item").text
+        gross_txt = gross_txt.split(maxsplit=1)[0].translate({ord(','): None, ord('$'): None})
+        gross = int(gross_txt)
+    except:
+        gross = -1
 
     return rating, number_of_votes, budget, gross
 
 
 def get_all_data(imdb_id):
-    url = get_url("0114709")
+    url = get_url(imdb_id)
     return get_info(url)
 
 

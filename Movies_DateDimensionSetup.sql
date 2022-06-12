@@ -154,7 +154,7 @@ SELECT
 FROM #dim
 OPTION (MAXDOP 1);
 
-drop table #dim
+drop table #dim;
 CREATE TABLE #dim
 (
   [date]       DATE PRIMARY KEY, 
@@ -234,8 +234,9 @@ FROM #dim
 OPTION (MAXDOP 1);
 
 
-
-drop table #dim
+go
+drop table #dim;
+go
 CREATE TABLE #dim
 (
   [date]       DATE PRIMARY KEY, 
@@ -378,85 +379,3 @@ AND d.[DayOfYear] = src.[DayOfYear] + 1;
 UPDATE x SET IsHoliday = 1, HolidayText = HolidayName;
 
 drop table #dim
-
-select *
-from DateDimension
-
-select *
-from Countries;
-
-select *
-from [dbo].[Movie];
-
-select *
-from Movie
-where MovieID in ( 
-	select MovieID
-	from [dbo].[Movie]
-	group by MovieID
-	having count(MovieID)=1
-);
-
-
-select count(*)
-from MovieDetails;
-
-select count(*)
-from People; 
-
-select * 
-from MoviePeople
-
-
-select * 
-from People
-where PersonID=235260
-
-alter table People
-alter column IMDBID varchar(10)
-
---select *, DATEADD(ms,10,ValidFrom) as AddMS
---from People
---where PersonID=235260
-
-
-
---ALTER TABLE MoviePeople
---ADD ReleaseDate datetime;
-
-select count(*) from MoviePeople;
-select count(*) from MovieDetails;
-
---update MoviePeople
---set ReleaseDate=res.ReleaseDate
---from MoviePeople as mp0
---inner join
---(
---	select cast(left(md.ReleaseDateID,8) as datetime) as ReleaseDate, mp.SKID
---	from MoviePeople as mp
---	inner join MovieDetails as md on mp.MovieID=md.MovieID
---) as res on mp0.SKID=res.SKID;
-
-
---ALTER TABLE MoviePeople
---ALTER COLUMN ReleaseDate datetime not null;
-
-select *
-from People;
-
-
---update People
---set ValidFrom=cast('1777-01-01' as datetime)
---where PersonSKID in (
---				select p.PersonSKID
---				from People p
---				left join
---				(
---					select PersonID, min(ValidFrom) as minValidFrom
---					from People
---					group by PersonID
---				) as p2 on p.PersonID=p2.PersonID
---				where ValidFrom=minValidFrom
---)
-
-
