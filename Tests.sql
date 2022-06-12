@@ -21,7 +21,7 @@ from MovieDetails
 
 select * 
 from People
-where PersonID in (4091, 2151819);
+where PersonID in (4091, 2160);
 
 
 select *
@@ -29,28 +29,5 @@ from Movie;
 
 select *
 from MoviePeople
-where PersonID in (4091, 2151819);
+where PersonID in (4091, 2160);
 
-
-select c.SubRegion, avg(m.IMDBRating) as IMDBRating, avg(m.TMDBRating) as TMDBRating, avg(m.MovieLensRating) as MovieLensRating
-from Movie m
-inner join Countries c on m.CountryID=c.CountryID
-group by c.SubRegion
-
-select *
-from Movie
-
-
-select *
-from MovieDetails
-
---update People 
---set ValidTo = ?,
---      Status='Hist' 
---where PersonID = ? and Status = 'Curr'
-
---update Movie 
---set IMDBRating = ?,
---	Revenue = ?,
---	Budget = ?
---where MovieID = ?
